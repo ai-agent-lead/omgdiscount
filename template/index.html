@@ -348,7 +348,7 @@
       .filter(o => (state.cat === "all" || o.cat === state.cat) &&
         (state.stage === "all" || o.stages.includes(state.stage)) &&
         (state.showExpired || !o.expired) &&
-        (state.tags.length === 0 || o.tags.some(t => state.tags.includes(t))) &&
+        (state.tags.length === 0 || (o.tags || []).some(t => state.tags.includes(t))) &&
         (!q || [o.name, o.benefit, o.elig, o.unit, CAT_LABEL[o.cat]].join(" ").toLowerCase().includes(q)))
       .sort(SORTS[state.sort]);
   }
@@ -521,7 +521,7 @@
   const TAG_LABEL = (t) => t.replace(/-/g, " ");
   function renderTagCloud() {
     const counts = {};
-    OFFERS.forEach(o => o.tags.forEach(t => { counts[t] = (counts[t] || 0) + 1; }));
+    OFFERS.forEach(o => (o.tags || []).forEach(t => { counts[t] = (counts[t] || 0) + 1; }));
     const tags = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
     const max = Math.max(1, ...Object.values(counts));
     $("tagcloud").innerHTML = tags.map(t => {
@@ -539,7 +539,7 @@
     render();
   });
   const urlTag = new URLSearchParams(location.search).get("tag");
-  if (urlTag && OFFERS.some(o => o.tags.includes(urlTag))) state.tags = [urlTag];
+  if (urlTag && OFFERS.some(o => (o.tags || []).includes(urlTag))) state.tags = [urlTag];
   renderTagCloud();
 
   const expiredCount = OFFERS.filter(o => o.expired).length;

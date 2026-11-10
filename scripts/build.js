@@ -571,6 +571,8 @@ function build() {
   renderCards(programs);
   const defaultImage = `${SITE}/og/default.png`;
 
+  fs.copyFileSync(path.join(TEMPLATE, "_headers"), path.join(DIST, "_headers"));
+
   // Listing page and its data.
   fs.writeFileSync(path.join(DIST, "index.html"), fill(fs.readFileSync(path.join(TEMPLATE, "index.html"), "utf8"), { FOOTER: footerHtml(""), META: ogTags({ title: "omgdiscount — startup and AI credits", description: "Startup and AI credits and discounts, sorted by what they are worth.", image: defaultImage, url: SITE + "/" }) }, path.join(TEMPLATE, "index.html")));
   fs.writeFileSync(path.join(DIST, "data.js"), dataJs(programs));
