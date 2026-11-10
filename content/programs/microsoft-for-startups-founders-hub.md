@@ -15,6 +15,7 @@ benefit: "Up to $150,000 in Azure credits, per the Founders Hub page"
 elig: "Privately held software startups; no funding required"
 stages: ["pre", "seed"]
 gate: ""
+expired: false
 apply_url: "https://www.microsoft.com/en-us/startups"
 ---
 

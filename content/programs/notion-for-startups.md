@@ -15,6 +15,7 @@ benefit: "Free months on a Notion plan through a partner offer"
 elig: "Startups with a partner code; net new customers only"
 stages: ["pre", "seed"]
 gate: "Partner code"
+expired: false
 apply_url: "https://www.notion.com/"
 ---
 
