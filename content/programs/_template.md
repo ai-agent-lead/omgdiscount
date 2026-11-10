@@ -14,6 +14,7 @@ benefit: "What you get, in a short phrase"
 elig: "Who qualifies, in a short phrase"
 stages: ["pre", "seed", "a"]
 gate: ""
+expired: false
 ---
 
 ## What it is
