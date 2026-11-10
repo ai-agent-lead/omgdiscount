@@ -7,6 +7,7 @@ order: 7
 short: "Notion"
 logo: "notion"
 category: "ops"
+tags: ["productivity","docs","partner-offer"]
 value: 0
 unit: "6 months free on Business plan (partner offer)"
 ai: false

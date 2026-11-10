@@ -7,6 +7,7 @@ order: 4
 short: "NVIDIA"
 logo: "nvidia"
 category: "ai"
+tags: ["ai","gpu","free","developer-tools"]
 value: 0
 unit: "Free membership; cloud credits vary by partner"
 ai: true

@@ -7,6 +7,7 @@ order: 1
 short: "Google Cloud"
 logo: "google-cloud"
 category: "cloud"
+tags: ["cloud","ai","hosting","database","startup-credits"]
 value: 100000
 unit: "USD credits, year 1 (Scale tier)"
 ai: true

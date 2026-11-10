@@ -169,6 +169,7 @@ function loadPrograms() {
     );
     need("gate", (v) => v === "" || typeof v === "string", "string (empty if none)");
     if (meta.expired !== undefined && typeof meta.expired !== "boolean") fail(file, "expired must be true or false");
+    if (meta.tags !== undefined && (!Array.isArray(meta.tags) || meta.tags.some((t) => typeof t !== "string" || !/^[a-z0-9-]+$/.test(t)))) fail(file, 'tags must be a list of lowercase words, e.g. ["cloud", "ai"]');
     need("logo", (v) => v === "" || typeof v === "string", "string logo file name without .svg (empty if none)");
     need("apply_url", (v) => v === "" || /^https:\/\//.test(v), "https URL to the provider's page (empty if none)");
     need("timestamp", (v) => typeof v === "string" && /^\d{4}-\d{2}-\d{2}/.test(v), "ISO date, e.g. 2026-11-10");
@@ -221,6 +222,7 @@ function dataJs(programs) {
     apply_url: p.meta.apply_url,
     updated: p.meta.timestamp,
     expired: p.meta.expired === true,
+    tags: p.meta.tags || [],
   }));
   const info = {};
   programs.forEach((p) => {
@@ -241,6 +243,7 @@ function programMain(p) {
         ${m.ai ? `<span class="tag ai">Uses AI</span>` : ""}
         ${m.gate ? `<span class="tag gate">${esc(m.gate)}</span>` : ""}
         ${m.expired ? `<span class="tag gate">Expired</span>` : ""}
+        ${(m.tags || []).map((t) => `<a class="tag" href="../index.html?tag=${esc(t)}">${esc(t.replace(/-/g, " "))}</a>`).join("\n        ")}
       </div>
       ${logo}
       <h1>${esc(m.title)}</h1>

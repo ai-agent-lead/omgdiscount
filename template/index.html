@@ -236,6 +236,14 @@
   .apply.off { opacity: .45; pointer-events: none; box-shadow: none; }
   .expired-toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); min-height: 40px; cursor: pointer; }
   .expired-toggle[hidden] { display: none; }
+  .tagcloud { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 24px; }
+  .tagcloud:empty { display: none; }
+  .tagchip { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--rule); background: var(--surface); color: var(--ink-2); font: inherit; line-height: 1; cursor: pointer; box-shadow: var(--highlight); transition: background 160ms var(--ease); }
+  .tagchip:hover { border-color: var(--ink); }
+  .tagchip small { font-size: 12px; color: var(--faint); }
+  .tagchip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .tagchip[aria-pressed="true"] small { color: var(--on-accent); }
+  .tagchip.clear { font-size: 13px; color: var(--muted); }
 </style>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -295,6 +303,8 @@
     </div>
   </nav>
 
+  <nav class="tagcloud" id="tagcloud" aria-label="Filter by tag"></nav>
+
   <p class="count" id="count" aria-live="polite"></p>
 
   <section id="featured" aria-label="Largest offer"></section>
@@ -318,7 +328,7 @@
   const STAGE_LABEL = { pre: "Pre-seed", seed: "Seed", a: "Series A+" };
   const money = (n) => "$" + n.toLocaleString("en-US");
   const PAGE_SIZE = 10;
-  const state = { q: "", cat: "all", stage: "all", sort: "updated", showExpired: false, page: 1 };
+  const state = { q: "", cat: "all", stage: "all", sort: "updated", showExpired: false, tags: [], page: 1 };
   const SORTS = {
     updated: (a, b) => b.updated.localeCompare(a.updated) || a.name.localeCompare(b.name),
     "value-desc": (a, b) => b.value - a.value,
@@ -338,6 +348,7 @@
       .filter(o => (state.cat === "all" || o.cat === state.cat) &&
         (state.stage === "all" || o.stages.includes(state.stage)) &&
         (state.showExpired || !o.expired) &&
+        (state.tags.length === 0 || o.tags.some(t => state.tags.includes(t))) &&
         (!q || [o.name, o.benefit, o.elig, o.unit, CAT_LABEL[o.cat]].join(" ").toLowerCase().includes(q)))
       .sort(SORTS[state.sort]);
   }
@@ -502,10 +513,34 @@
     render();
   }));
   $("reset").addEventListener("click", () => {
-    state.q = ""; state.cat = "all"; state.stage = "all"; state.sort = "updated"; state.page = 1; $("q").value = ""; $("stage").value = "all"; $("sort").value = "updated"; state.showExpired = false; $("show-expired").checked = false;
+    state.q = ""; state.cat = "all"; state.stage = "all"; state.sort = "updated"; state.page = 1; $("q").value = ""; $("stage").value = "all"; $("sort").value = "updated"; state.showExpired = false; $("show-expired").checked = false; state.tags = []; renderTagCloud();
     document.querySelectorAll(".filter").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.cat === "all")));
     render();
   });
+
+  const TAG_LABEL = (t) => t.replace(/-/g, " ");
+  function renderTagCloud() {
+    const counts = {};
+    OFFERS.forEach(o => o.tags.forEach(t => { counts[t] = (counts[t] || 0) + 1; }));
+    const tags = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
+    const max = Math.max(1, ...Object.values(counts));
+    $("tagcloud").innerHTML = tags.map(t => {
+      const size = (13 + (counts[t] / max) * 5).toFixed(1);
+      return `<button class="tagchip" type="button" data-tag="${t}" aria-pressed="${state.tags.includes(t)}" style="font-size:${size}px">${TAG_LABEL(t)}<small>${counts[t]}</small></button>`;
+    }).join("") + (state.tags.length ? `<button class="tagchip clear" type="button" id="tag-clear">Clear tags</button>` : "");
+  }
+  $("tagcloud").addEventListener("click", e => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    if (b.id === "tag-clear") state.tags = [];
+    else state.tags = state.tags.includes(b.dataset.tag) ? state.tags.filter(t => t !== b.dataset.tag) : [...state.tags, b.dataset.tag];
+    state.page = 1;
+    renderTagCloud();
+    render();
+  });
+  const urlTag = new URLSearchParams(location.search).get("tag");
+  if (urlTag && OFFERS.some(o => o.tags.includes(urlTag))) state.tags = [urlTag];
+  renderTagCloud();
 
   const expiredCount = OFFERS.filter(o => o.expired).length;
   if (expiredCount) { $("expired-wrap").hidden = false; $("n-expired").textContent = `(${expiredCount})`; }

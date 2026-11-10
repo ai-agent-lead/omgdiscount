@@ -7,6 +7,7 @@ order: 2
 short: "Microsoft Azure"
 logo: "microsoft-azure"
 category: "cloud"
+tags: ["cloud","ai","hosting","startup-credits","no-funding-needed"]
 value: 150000
 unit: "USD Azure credits"
 ai: false

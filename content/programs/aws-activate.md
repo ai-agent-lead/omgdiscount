@@ -7,6 +7,7 @@ order: 3
 short: "AWS"
 logo: "aws"
 category: "cloud"
+tags: ["cloud","ai","hosting","startup-credits","referral"]
 value: 200000
 unit: "USD credits, Portfolio tier (ceiling)"
 ai: false
