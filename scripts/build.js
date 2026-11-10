@@ -425,6 +425,9 @@ function build() {
 
   // Logos.
   if (fs.existsSync(LOGOS)) fs.cpSync(LOGOS, path.join(DIST, "logos"), { recursive: true });
+  for (const f of fs.readdirSync(TEMPLATE).filter((n) => n.startsWith("favicon."))) {
+    fs.copyFileSync(path.join(TEMPLATE, f), path.join(DIST, f));
+  }
 
   // One static detail page per program.
   const programTpl = fs.readFileSync(path.join(TEMPLATE, "program.html"), "utf8");
