@@ -7,6 +7,7 @@ order: 44
 short: "MongoDB"
 logo: "mongodb"
 category: "cloud"
+tags: ["database","cloud","free"]
 value: 0
 unit: "Free-forever M0 cluster; 512 MB storage"
 ai: false

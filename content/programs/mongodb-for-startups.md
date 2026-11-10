@@ -7,7 +7,7 @@ order: 58
 short: "MongoDB"
 logo: "mongodb"
 category: "cloud"
-tags: ["database","startup-credits","referral"]
+tags: ["database","cloud","ai","startup-credits","referral"]
 value: 0
 unit: "Atlas credits and Voyage AI tokens; amounts not published"
 ai: true

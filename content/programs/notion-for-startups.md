@@ -7,7 +7,7 @@ order: 7
 short: "Notion"
 logo: "notion"
 category: "ops"
-tags: ["productivity","docs","partner-offer"]
+tags: ["productivity","docs","startup-credits","referral"]
 value: 0
 unit: "1 to 6 months free on the Business plan, with Notion AI included"
 ai: false

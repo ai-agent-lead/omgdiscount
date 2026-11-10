@@ -7,7 +7,7 @@ order: 61
 short: "DigitalOcean"
 logo: ""
 category: "cloud"
-tags: ["cloud","hosting","startup-credits","referral"]
+tags: ["cloud","ai","hosting","startup-credits","referral"]
 value: 0
 unit: "12 months of DigitalOcean credits; amount set by your partner and not published"
 ai: true

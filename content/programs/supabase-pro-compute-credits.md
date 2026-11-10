@@ -7,6 +7,7 @@ order: 48
 short: "Supabase"
 logo: "supabase"
 category: "cloud"
+tags: ["database","cloud"]
 value: 10
 unit: "USD compute credits per month, included with Pro and Team"
 ai: false

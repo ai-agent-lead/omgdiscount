@@ -7,6 +7,7 @@ order: 37
 short: "Cloudflare"
 logo: "cloudflare"
 category: "cloud"
+tags: ["cloud","hosting","free"]
 value: 0
 unit: "Free plan; 100,000 Worker requests per day and related daily limits"
 ai: false

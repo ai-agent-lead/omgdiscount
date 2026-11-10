@@ -7,6 +7,7 @@ order: 22
 short: "Cloudflare"
 logo: "cloudflare"
 category: "cloud"
+tags: ["cloud","free"]
 value: 0
 unit: "Free Business-plan security for approved at-risk sites"
 ai: false

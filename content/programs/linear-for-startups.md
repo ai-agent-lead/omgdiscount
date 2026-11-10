@@ -7,7 +7,7 @@ order: 59
 short: "Linear"
 logo: ""
 category: "dev"
-tags: ["project-management","developer-tools","partner-offer"]
+tags: ["project-management","developer-tools","startup-credits","referral"]
 value: 0
 unit: "Free Business plan through a partner; length not stated"
 ai: false

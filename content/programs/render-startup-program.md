@@ -7,6 +7,7 @@ order: 13
 short: "Render"
 logo: "render"
 category: "cloud"
+tags: ["cloud","hosting","startup-credits","referral"]
 value: 100000
 unit: "USD credits, one year (AI tier ceiling)"
 ai: false

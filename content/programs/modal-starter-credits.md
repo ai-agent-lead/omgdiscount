@@ -7,6 +7,7 @@ order: 38
 short: "Modal"
 logo: "modal"
 category: "ai"
+tags: ["ai","gpu","cloud","free"]
 value: 30
 unit: "USD compute credits per month, on the Starter plan"
 ai: true

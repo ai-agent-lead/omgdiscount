@@ -7,7 +7,7 @@ order: 57
 short: "GitHub"
 logo: ""
 category: "dev"
-tags: ["student","developer-tools","free"]
+tags: ["ai","developer-tools","student","free"]
 value: 0
 unit: "Free pack of partner offers; each offer has its own terms"
 ai: true

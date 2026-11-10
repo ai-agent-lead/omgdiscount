@@ -7,6 +7,7 @@ order: 31
 short: "Fly.io"
 logo: "fly-io"
 category: "cloud"
+tags: ["cloud","hosting","trial"]
 value: 1
 unit: "USD trial credit, 7 days"
 ai: false

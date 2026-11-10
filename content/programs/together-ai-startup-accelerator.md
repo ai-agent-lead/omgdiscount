@@ -7,6 +7,7 @@ order: 14
 short: "Together AI"
 logo: ""
 category: "ai"
+tags: ["ai","gpu","cloud","startup-credits"]
 value: 50000
 unit: "USD platform credits (ceiling)"
 ai: true

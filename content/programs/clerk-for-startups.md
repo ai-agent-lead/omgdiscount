@@ -7,7 +7,7 @@ order: 60
 short: "Clerk"
 logo: ""
 category: "dev"
-tags: ["authentication","developer-tools","startup-discount"]
+tags: ["authentication","developer-tools","startup-credits"]
 value: 0
 unit: "Discount on Clerk Pro; amount and length not published"
 ai: false
