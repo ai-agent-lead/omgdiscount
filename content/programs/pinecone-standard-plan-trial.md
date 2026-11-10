@@ -7,6 +7,7 @@ order: 50
 short: "Pinecone"
 logo: ""
 category: "ai"
+tags: ["database","ai","trial"]
 value: 300
 unit: "USD credits, 21-day Standard trial"
 ai: true

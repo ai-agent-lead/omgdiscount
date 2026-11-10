@@ -7,6 +7,7 @@ order: 47
 short: "Supabase"
 logo: "supabase"
 category: "cloud"
+tags: ["database","cloud","free"]
 value: 0
 unit: "Free plan; 2 active projects, 500 MB database, 50,000 MAUs"
 ai: false

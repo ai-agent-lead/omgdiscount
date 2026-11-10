@@ -7,6 +7,7 @@ order: 16
 short: "Neon"
 logo: "neon"
 category: "cloud"
+tags: ["database","cloud","open-source"]
 value: 10000
 unit: "USD optional credits (Neon plus AI Gateway); cash amount is set in review"
 ai: false

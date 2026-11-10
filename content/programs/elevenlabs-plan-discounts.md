@@ -7,6 +7,7 @@ order: 36
 short: "ElevenLabs"
 logo: "elevenlabs"
 category: "ai"
+tags: ["ai","voice"]
 value: 0
 unit: "First-month discounts, plus annual billing at 10 months' price"
 ai: true

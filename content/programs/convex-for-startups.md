@@ -7,6 +7,7 @@ order: 15
 short: "Convex"
 logo: "convex"
 category: "dev"
+tags: ["database","startup-credits"]
 value: 0
 unit: "1 year of Professional, plus 30% off usage up to $30k"
 ai: false

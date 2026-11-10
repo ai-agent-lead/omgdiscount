@@ -7,6 +7,7 @@ order: 54
 short: "ElevenLabs"
 logo: "elevenlabs"
 category: "ai"
+tags: ["ai","voice","trial"]
 value: 1
 unit: "USD promotional price for 30,000 credits"
 ai: true

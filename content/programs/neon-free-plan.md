@@ -7,6 +7,7 @@ order: 34
 short: "Neon"
 logo: "neon"
 category: "cloud"
+tags: ["database","cloud","free"]
 value: 0
 unit: "Permanent Free plan; 100 projects, 100 CU-hours and 5 GB transfer per project each month"
 ai: false

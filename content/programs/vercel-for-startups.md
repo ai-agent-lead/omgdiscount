@@ -7,7 +7,7 @@ order: 6
 short: "Vercel"
 logo: "vercel"
 category: "dev"
-tags: ["hosting","frontend","developer-tools","referral"]
+tags: ["hosting","frontend","developer-tools","startup-credits","referral"]
 value: 30000
 unit: "USD Vercel credits, up to one year"
 ai: false

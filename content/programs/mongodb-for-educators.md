@@ -7,6 +7,7 @@ order: 27
 short: "MongoDB"
 logo: "mongodb"
 category: "cloud"
+tags: ["database","cloud","education"]
 value: 500
 unit: "USD Atlas credits, plus free certification"
 ai: false

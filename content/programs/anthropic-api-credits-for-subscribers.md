@@ -7,6 +7,7 @@ order: 46
 short: "Anthropic"
 logo: "anthropic"
 category: "ai"
+tags: ["ai","developer-tools"]
 value: 500
 unit: "USD API credits per month (Team ceiling; Max is $100, Ultra is $200)"
 ai: true

@@ -7,6 +7,7 @@ order: 8
 short: "Fly.io"
 logo: "fly-io"
 category: "cloud"
+tags: ["cloud","hosting","startup-credits","referral"]
 value: 15000
 unit: "USD credits, one year"
 ai: false
