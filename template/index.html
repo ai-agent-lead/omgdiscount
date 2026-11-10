@@ -122,7 +122,9 @@
 
   /* shared pieces */
   .head { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-  .tag { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 999px; background: var(--tag-bg); font-size: 12px; color: var(--ink-2); font-weight: 500; }
+  .tag { display: inline-flex; align-items: center; box-sizing: border-box; min-height: 24px; max-width: 100%; padding: 4px 10px; border-radius: 999px; background: var(--tag-bg); font-family: var(--sans); font-size: 12px; line-height: 1.3; letter-spacing: 0; color: var(--ink-2); font-weight: 500; text-align: left; white-space: normal; }
+  button.tag { border: 0; cursor: pointer; }
+  button.tag:hover { text-decoration: underline; text-underline-offset: 3px; }
   .tag.ai { color: var(--accent-fg); background: var(--accent-soft); }
   .tag.gate { color: var(--gate-fg); background: var(--gate-bg); }
   .title { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
@@ -150,7 +152,7 @@
   .row .logo-text { font-size: 12px; }
   .row .use { font-size: 15px; color: var(--ink-2); }
   .row .stages { display: flex; flex-wrap: wrap; gap: 6px; }
-  .row .stages .tag { height: 24px; font-size: 12px; padding: 0 8px; }
+  .row .stages .tag { font-size: 12px; padding: 4px 8px; }
   .row .val { text-align: right; }
   .row .val .amount-value { font-size: 20px; }
   .row .val .amount-unit { font-size: 12px; margin-top: 2px; }
@@ -380,11 +382,14 @@
 
   function tagsHTML(o) {
     return `
-      ${o.ai ? `<span class="tag ai">Uses AI</span>` : ""}
+      ${o.ai ? `<button class="tag ai tagbtn" type="button" data-tag="ai">Uses AI</button>` : ""}
+      ${topicTags(o)}
       ${o.stages.map(s => `<span class="tag">${STAGE_LABEL[s]}</span>`).join("")}
       ${o.gate ? `<span class="tag gate">${o.gate}</span>` : ""}`;
   }
   const logoHTML = (o) => `<span class="logo"><img src="logos/${o.logo}.svg" alt="" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'"><span class="logo-text">${o.short}</span></span>`;
+  const topicTags = (o) => (o.tags || []).map(t => `<button class="tag tagbtn" type="button" data-tag="${t}">${TAG_LABEL(t)}</button>`).join("");
+
   const valueHTML = (o) => `${o.value === 0 ? "" : `<p class="amount-value">${money(o.value)}</p>`}<p class="amount-unit">${o.unit}</p>`;
 
   function renderFeature(o) {
@@ -422,7 +427,7 @@
         <div>
           ${logoHTML(o)}
           <h3 class="name"><a class="name-link" href="programs/${o.id}.html">${o.name}</a></h3>
-          <div class="head" style="margin:8px 0 0">${o.gate ? `<span class="tag gate">${o.gate}</span>` : ""}${o.ai ? `<span class="tag ai">Uses AI</span>` : ""}</div>
+          <div class="head" style="margin:8px 0 0">${topicTags(o)}${o.gate ? `<span class="tag gate">${o.gate}</span>` : ""}${o.ai ? `<button class="tag ai tagbtn" type="button" data-tag="ai">Uses AI</button>` : ""}</div>
         </div>
         <div class="use">${o.use}</div>
         <div class="stages">${o.stages.map(s => `<span class="tag">${STAGE_LABEL[s]}</span>`).join("")}</div>
@@ -537,6 +542,15 @@
     state.page = 1;
     renderTagCloud();
     render();
+  });
+  document.addEventListener("click", e => {
+    const b = e.target.closest(".tagbtn");
+    if (!b) return;
+    state.tags = [b.dataset.tag];
+    state.page = 1;
+    renderTagCloud();
+    render();
+    $("tagcloud").scrollIntoView({ block: "center", behavior: "smooth" });
   });
   const urlTag = new URLSearchParams(location.search).get("tag");
   if (urlTag && OFFERS.some(o => (o.tags || []).includes(urlTag))) state.tags = [urlTag];
