@@ -218,6 +218,7 @@ function dataJs(programs) {
     stages: p.meta.stages,
     gate: p.meta.gate,
     apply_url: p.meta.apply_url,
+    updated: p.meta.timestamp,
   }));
   const info = {};
   programs.forEach((p) => {

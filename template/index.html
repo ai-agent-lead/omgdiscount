@@ -280,6 +280,12 @@
         <option value="seed">Seed</option>
         <option value="a">Series A+</option>
       </select>
+      <select class="stage" id="sort" aria-label="Sort by">
+        <option value="updated">Latest update</option>
+        <option value="value-desc">Highest value</option>
+        <option value="value-asc">Lowest value</option>
+        <option value="name">Name A–Z</option>
+      </select>
       <div class="search">
         <input id="q" type="search" aria-label="Search offers" placeholder="Search" autocomplete="off">
       </div>
@@ -309,7 +315,13 @@
   const STAGE_LABEL = { pre: "Pre-seed", seed: "Seed", a: "Series A+" };
   const money = (n) => "$" + n.toLocaleString("en-US");
   const PAGE_SIZE = 10;
-  const state = { q: "", cat: "all", stage: "all", page: 1 };
+  const state = { q: "", cat: "all", stage: "all", sort: "updated", page: 1 };
+  const SORTS = {
+    updated: (a, b) => b.updated.localeCompare(a.updated) || a.name.localeCompare(b.name),
+    "value-desc": (a, b) => b.value - a.value,
+    "value-asc": (a, b) => a.value - b.value,
+    name: (a, b) => a.name.localeCompare(b.name),
+  };
   const $ = (id) => document.getElementById(id);
 
   // Category counts describe the whole list, not the current search.
@@ -323,7 +335,7 @@
       .filter(o => (state.cat === "all" || o.cat === state.cat) &&
         (state.stage === "all" || o.stages.includes(state.stage)) &&
         (!q || [o.name, o.benefit, o.elig, o.unit, CAT_LABEL[o.cat]].join(" ").toLowerCase().includes(q)))
-      .sort((a, b) => b.value - a.value);
+      .sort(SORTS[state.sort]);
   }
 
   let raf = 0, first = true;
@@ -468,6 +480,7 @@
 
   $("q").addEventListener("input", e => { state.q = e.target.value; state.page = 1; render(); });
   $("stage").addEventListener("change", e => { state.stage = e.target.value; state.page = 1; render(); });
+  $("sort").addEventListener("change", e => { state.sort = e.target.value; state.page = 1; render(); });
   $("pager").addEventListener("click", e => {
     const b = e.target.closest("button");
     if (!b || b.disabled) return;
@@ -484,7 +497,7 @@
     render();
   }));
   $("reset").addEventListener("click", () => {
-    state.q = ""; state.cat = "all"; state.stage = "all"; state.page = 1; $("q").value = ""; $("stage").value = "all";
+    state.q = ""; state.cat = "all"; state.stage = "all"; state.sort = "updated"; state.page = 1; $("q").value = ""; $("stage").value = "all"; $("sort").value = "updated";
     document.querySelectorAll(".filter").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.cat === "all")));
     render();
   });
