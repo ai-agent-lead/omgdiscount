@@ -33,5 +33,5 @@ Teams serving open-source models behind an API.
 
 1. Create a Forge account and pick a model from the catalog.
 2. Request the hosting credit with your expected traffic.
-3. Deploy the endpoint and test it with a sample request.
+3. Deploy the endpoint and send a test request to it.
 4. Monitor usage and move to a paid plan when credits run out.
