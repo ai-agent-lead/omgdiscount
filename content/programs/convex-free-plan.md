@@ -7,7 +7,6 @@ order: 40
 short: "Convex"
 logo: "convex"
 category: "dev"
-tags: ["database","free"]
 value: 0
 unit: "Free plan included usage, then pay as you go on Starter"
 ai: false

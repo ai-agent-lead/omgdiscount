@@ -7,7 +7,6 @@ order: 39
 short: "Render"
 logo: "render"
 category: "cloud"
-tags: ["cloud","hosting","free"]
 value: 0
 unit: "Free compute plan; 750 web-service instance hours per month"
 ai: false

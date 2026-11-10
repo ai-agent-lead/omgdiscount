@@ -7,7 +7,6 @@ order: 29
 short: "Anthropic"
 logo: "anthropic"
 category: "ai"
-tags: ["ai","research"]
 value: 20000
 unit: "USD API credits, 6 months"
 ai: true

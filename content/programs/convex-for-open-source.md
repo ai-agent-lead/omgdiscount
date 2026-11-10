@@ -7,7 +7,6 @@ order: 24
 short: "Convex"
 logo: "convex"
 category: "dev"
-tags: ["database","open-source"]
 value: 0
 unit: "Free Convex Pro for one team, within built-in Pro resource limits"
 ai: false

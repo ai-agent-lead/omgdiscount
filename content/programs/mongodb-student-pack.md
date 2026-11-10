@@ -7,7 +7,6 @@ order: 26
 short: "MongoDB"
 logo: "mongodb"
 category: "cloud"
-tags: ["database","cloud","student"]
 value: 200
 unit: "USD stated benefits ($50 Atlas credits plus $150 certification)"
 ai: false

@@ -7,7 +7,6 @@ order: 23
 short: "Modal"
 logo: "modal"
 category: "ai"
-tags: ["ai","gpu","cloud","research"]
 value: 10000
 unit: "USD compute credits (ceiling)"
 ai: true

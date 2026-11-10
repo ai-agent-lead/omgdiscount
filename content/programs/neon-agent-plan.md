@@ -7,7 +7,6 @@ order: 17
 short: "Neon"
 logo: "neon"
 category: "cloud"
-tags: ["database","cloud","ai","startup-credits"]
 value: 25000
 unit: "USD paid-tier credits, plus sponsored free-tier infrastructure"
 ai: true

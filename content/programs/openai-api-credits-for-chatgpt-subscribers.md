@@ -7,7 +7,6 @@ order: 45
 short: "OpenAI"
 logo: ""
 category: "ai"
-tags: ["ai","developer-tools"]
 value: 500
 unit: "USD API credits per month (ceiling, depending on plan and seats)"
 ai: true

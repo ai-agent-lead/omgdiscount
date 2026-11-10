@@ -7,7 +7,6 @@ order: 53
 short: "Vercel"
 logo: "vercel"
 category: "dev"
-tags: ["hosting","frontend","open-source"]
 value: 3600
 unit: "USD Vercel platform credits over 3 years"
 ai: false

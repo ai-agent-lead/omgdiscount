@@ -7,7 +7,6 @@ order: 49
 short: "Pinecone"
 logo: ""
 category: "ai"
-tags: ["database","ai","free"]
 value: 0
 unit: "Free Starter plan with limited storage, reads, writes and inference"
 ai: true

@@ -7,7 +7,6 @@ order: 42
 short: "Vercel"
 logo: "vercel"
 category: "dev"
-tags: ["hosting","frontend","trial"]
 value: 20
 unit: "USD credit, 14-day Pro trial"
 ai: false

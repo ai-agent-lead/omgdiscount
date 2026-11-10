@@ -7,7 +7,6 @@ order: 41
 short: "Vercel"
 logo: "vercel"
 category: "dev"
-tags: ["hosting","frontend","free"]
 value: 0
 unit: "Free Hobby plan with monthly included hosting and function usage"
 ai: false

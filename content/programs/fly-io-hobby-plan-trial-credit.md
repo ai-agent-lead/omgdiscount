@@ -7,7 +7,6 @@ order: 55
 short: "Fly.io"
 logo: "fly-io"
 category: "cloud"
-tags: ["cloud","hosting","trial"]
 value: 5
 unit: "USD one-time trial credit, on the discontinued Hobby plan"
 ai: false

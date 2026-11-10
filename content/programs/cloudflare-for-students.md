@@ -7,7 +7,6 @@ order: 20
 short: "Cloudflare"
 logo: "cloudflare"
 category: "cloud"
-tags: ["cloud","hosting","student"]
 value: 60
 unit: "USD, Workers Paid base fee waived for 12 months"
 ai: false

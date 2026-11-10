@@ -7,7 +7,6 @@ order: 25
 short: "v0"
 logo: "vercel"
 category: "ai"
-tags: ["ai","frontend","student"]
 value: 240
 unit: "USD v0 credits over 12 months ($20 per month)"
 ai: true

@@ -7,7 +7,6 @@ order: 43
 short: "Vercel"
 logo: "vercel"
 category: "ai"
-tags: ["ai","developer-tools","free"]
 value: 5
 unit: "USD AI Gateway credits per month, until you purchase credits"
 ai: true

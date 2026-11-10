@@ -7,7 +7,6 @@ order: 10
 short: "ElevenLabs"
 logo: "elevenlabs"
 category: "ai"
-tags: ["ai","voice","startup-credits"]
 value: 5500
 unit: "USD stated value, 33M characters over 12 months"
 ai: true

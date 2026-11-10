@@ -7,7 +7,6 @@ order: 21
 short: "Cloudflare"
 logo: "cloudflare"
 category: "cloud"
-tags: ["cloud","hosting","open-source","nonprofit"]
 value: 0
 unit: "Recurring annual credits; amount not published"
 ai: false

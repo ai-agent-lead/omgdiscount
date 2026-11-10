@@ -7,7 +7,6 @@ order: 35
 short: "ElevenLabs"
 logo: "elevenlabs"
 category: "ai"
-tags: ["ai","voice","free"]
 value: 0
 unit: "10,000 credits per month on the Free plan"
 ai: true

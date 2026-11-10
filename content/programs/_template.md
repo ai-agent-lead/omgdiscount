@@ -7,7 +7,6 @@ order: 99
 short: "Short brand name"
 logo: ""
 category: "cloud"
-tags: ["cloud"]
 value: 0
 unit: "USD credits"
 ai: false

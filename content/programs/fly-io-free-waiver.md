@@ -7,7 +7,6 @@ order: 32
 short: "Fly.io"
 logo: "fly-io"
 category: "cloud"
-tags: ["cloud","hosting","free"]
 value: 5
 unit: "USD monthly waiver on personal organizations (bills under $5)"
 ai: false

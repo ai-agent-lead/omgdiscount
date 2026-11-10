@@ -7,7 +7,6 @@ order: 33
 short: "Fly.io"
 logo: "fly-io"
 category: "cloud"
-tags: ["cloud","hosting"]
 value: 0
 unit: "40% off reserved Machine compute, billed as one-year blocks"
 ai: false

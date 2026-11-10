@@ -7,7 +7,6 @@ order: 28
 short: "OpenAI"
 logo: ""
 category: "ai"
-tags: ["ai","research"]
 value: 1000
 unit: "USD API credits, 12 months"
 ai: true

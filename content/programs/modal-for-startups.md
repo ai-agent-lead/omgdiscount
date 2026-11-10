@@ -7,7 +7,6 @@ order: 12
 short: "Modal"
 logo: "modal"
 category: "ai"
-tags: ["ai","gpu","cloud","startup-credits"]
 value: 0
 unit: "Free GPU credits; amount not published"
 ai: true

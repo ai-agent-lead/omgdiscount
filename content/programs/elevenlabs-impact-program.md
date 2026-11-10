@@ -7,7 +7,6 @@ order: 19
 short: "ElevenLabs"
 logo: "elevenlabs"
 category: "ai"
-tags: ["ai","voice","nonprofit"]
 value: 0
 unit: "12 months of free Pro access for approved nonprofits"
 ai: true
