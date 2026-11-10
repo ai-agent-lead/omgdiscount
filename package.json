@@ -1,0 +1,11 @@
+{
+  "name": "omgdiscount",
+  "private": true,
+  "description": "Startup and AI credits list, built from markdown posts into static pages",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}

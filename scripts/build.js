@@ -21,6 +21,7 @@
  */
 const fs = require("fs");
 const path = require("path");
+const { Resvg } = require("@resvg/resvg-js");
 
 const ROOT = path.resolve(__dirname, "..");
 const CONTENT = path.join(ROOT, "content", "programs");
@@ -398,58 +399,126 @@ function categoryMain(key, programs) {
 
 
 // ---------- social cards and share tags ----------
+// Each card is drawn as SVG and rendered to PNG during the build (no browser needed),
+// so the Cloudflare build produces every card from the posts.
 
 const SITE = "https://omgdiscount.com";
-const SOCIAL_SRC = path.join(ROOT, "social-src"); // HTML cards, regenerated each build (git-ignored)
-const SOCIAL_PNG = path.join(ROOT, "social"); // rendered PNG cards, committed; copied to dist/og/
+const FONT_DIR = path.join(TEMPLATE, "fonts");
+const CARD_W = 1200;
+const CARD_H = 630;
 
-const CARD_CSS = `
-  *{box-sizing:border-box}
-  html,body{margin:0;width:1200px;height:630px;overflow:hidden}
-  body{position:relative;background:#0f172a;color:#f8fafc;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-  body::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgb(255 255 255/.10) 1.5px,transparent 1.5px);background-size:28px 28px}
-  body::after{content:"";position:absolute;right:-220px;top:-260px;width:820px;height:820px;background:radial-gradient(closest-side,rgb(93 97 236/.55),transparent)}
-  .wrap{position:relative;height:100%;padding:60px 72px;display:flex;flex-direction:column}
-  .top{display:flex;justify-content:space-between;align-items:center}
-  .brand{display:flex;align-items:center;font-size:32px;font-weight:800;letter-spacing:-.035em}
-  .coin{position:relative;display:inline-block;width:30px;height:30px;margin-right:2px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fde68a 0%,#f5b82e 48%,#b7791f 100%)}
-  .coin::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:11px;background:#1c1917;border-radius:2px;transform:translate(-50%,-50%) rotate(45deg)}
-  .disc{color:#fcd34d}
-  .plogo{height:52px;max-width:240px;object-fit:contain;object-position:right center;filter:invert(1)}
-  .cat{margin-top:auto;font-size:22px;font-weight:600;color:#a5b4fc;letter-spacing:.02em;text-transform:uppercase}
-  h1{margin:14px 0 0;font-size:72px;line-height:1.04;letter-spacing:-.035em;font-weight:700;max-width:18ch}
-  .value{margin-top:26px;font-size:52px;font-weight:700;color:#fcd34d;letter-spacing:-.02em}
-  .unit{margin-top:6px;font-size:24px;color:#c4cbd6}
-  .foot{margin-top:34px;display:flex;justify-content:space-between;align-items:center;font-size:22px;color:#a3adbd}
-  .foot b{color:#f8fafc;font-weight:600}
-`;
+const ink = { bg: "#0f172a", text: "#f8fafc", muted: "#c4cbd6", faint: "#a3adbd", gold: "#fcd34d", tag: "#a5b4fc" };
 
-function cardPage(body) {
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>${CARD_CSS}</style></head><body><div class="wrap">${body}</div></body></html>`;
+// Greedy word wrap; the last line is shortened with an ellipsis when there are too many lines.
+function wrapText(text, maxChars, maxLines) {
+  const words = String(text).split(/\s+/).filter(Boolean);
+  const lines = [];
+  let cur = "";
+  for (const w of words) {
+    const next = cur ? cur + " " + w : w;
+    if (next.length > maxChars && cur) {
+      lines.push(cur);
+      cur = w;
+    } else {
+      cur = next;
+    }
+  }
+  if (cur) lines.push(cur);
+  if (lines.length > maxLines) {
+    const kept = lines.slice(0, maxLines);
+    kept[maxLines - 1] = kept[maxLines - 1].replace(/\s*\S*$/, "") + "…";
+    return kept;
+  }
+  return lines;
 }
 
-const brandRow = (logoHtml) =>
-  `<div class="top"><span class="brand"><span class="coin"></span>mg<span class="disc">discount</span></span>${logoHtml}</div>`;
+function truncate(text, max) {
+  const t = String(text);
+  return t.length <= max ? t : t.slice(0, max - 1).replace(/\s*\S*$/, "") + "…";
+}
 
-function programCard(p) {
+// Inline a single-colour logo SVG, recoloured to the card's text colour.
+function inlineLogo(name, x, y, w, h) {
+  if (!name) return "";
+  const file = path.join(LOGOS, name + ".svg");
+  if (!fs.existsSync(file)) return "";
+  const src = fs.readFileSync(file, "utf8");
+  const m = src.match(/<svg[^>]*viewBox="([^"]+)"[^>]*>([\s\S]*)<\/svg>/);
+  if (!m) return "";
+  const inner = m[2].replace(/fill="[^"]*"/g, `fill="${ink.text}"`);
+  return `<svg x="${x}" y="${y}" width="${w}" height="${h}" viewBox="${m[1]}" preserveAspectRatio="xMaxYMid meet"><g fill="${ink.text}">${inner}</g></svg>`;
+}
+
+function cardSvg({ category, title, value, unit, footnote, logo }) {
+  const titleLines = wrapText(title, 26, 2);
+  const titleSvg = titleLines
+    .map((line, i) => `<text x="72" y="${360 + i * 66}" font-size="60" font-weight="700" fill="${ink.text}" letter-spacing="-1.5">${esc(line)}</text>`)
+    .join("\n  ");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${CARD_W}" height="${CARD_H}" viewBox="0 0 ${CARD_W} ${CARD_H}">
+  <defs>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" fill-opacity="0.10"/></pattern>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0%" stop-color="#5d61ec" stop-opacity="0.55"/><stop offset="100%" stop-color="#5d61ec" stop-opacity="0"/></radialGradient>
+    <radialGradient id="coin" cx="0.35" cy="0.3" r="0.75"><stop offset="0%" stop-color="#fde68a"/><stop offset="48%" stop-color="#f5b82e"/><stop offset="100%" stop-color="#b7791f"/></radialGradient>
+  </defs>
+  <rect width="${CARD_W}" height="${CARD_H}" fill="${ink.bg}"/>
+  <rect width="${CARD_W}" height="${CARD_H}" fill="url(#dots)"/>
+  <circle cx="1040" cy="40" r="480" fill="url(#glow)"/>
+  <circle cx="88" cy="76" r="15" fill="url(#coin)"/>
+  <polygon points="88,66 98,76 88,86 78,76" fill="#1c1917"/>
+  <text x="112" y="88" font-size="32" font-weight="700" fill="${ink.text}" letter-spacing="-1">mg<tspan fill="${ink.gold}">discount</tspan></text>
+  ${logo}
+  <text x="72" y="300" font-size="22" font-weight="700" fill="${ink.tag}" letter-spacing="1">${esc(category.toUpperCase())}</text>
+  ${titleSvg}
+  <text x="72" y="500" font-size="52" font-weight="700" fill="${ink.gold}" letter-spacing="-1">${esc(value)}</text>
+  <text x="72" y="540" font-size="24" fill="${ink.muted}">${esc(unit)}</text>
+  <text x="72" y="590" font-size="22" fill="${ink.faint}">${esc(footnote)}</text>
+  <text x="1128" y="590" font-size="22" font-weight="700" fill="${ink.text}" text-anchor="end">omgdiscount.com</text>
+</svg>`;
+}
+
+function renderPng(svg) {
+  const fontFiles = ["Inter-Regular.ttf", "Inter-SemiBold.ttf", "Inter-Bold.ttf"].map((f) => path.join(FONT_DIR, f));
+  const resvg = new Resvg(svg, {
+    fitTo: { mode: "width", value: CARD_W },
+    font: { fontFiles, loadSystemFonts: false, defaultFontFamily: "Inter" },
+  });
+  return resvg.render().asPng();
+}
+
+function programCardPng(p) {
   const m = p.meta;
-  const logo = m.logo ? `<img class="plogo" src="${path.join(LOGOS, m.logo + ".svg")}" alt="">` : "";
   const value = m.value === 0 ? "Free" : money(m.value);
-  return cardPage(`${brandRow(logo)}
-    <div class="cat">${esc(CATEGORIES[m.category])}</div>
-    <h1>${esc(m.title)}</h1>
-    <div class="value">${esc(value)}</div>
-    <div class="unit">${esc(m.unit)}</div>
-    <div class="foot"><span>${esc(p.what)}</span><b>omgdiscount.com</b></div>`);
+  return renderPng(
+    cardSvg({
+      category: CATEGORIES[m.category],
+      title: m.title,
+      value,
+      unit: truncate(m.unit, 60),
+      footnote: truncate(p.what, 90),
+      logo: inlineLogo(m.logo, 888, 52, 240, 52),
+    })
+  );
 }
 
-function defaultCard(count) {
-  return cardPage(`${brandRow("")}
-    <div class="cat">Startup and AI credits</div>
-    <h1>Startup and AI credits, sorted by what they are worth</h1>
-    <div class="value">${count} programs</div>
-    <div class="unit">Cloud, AI, dev tools and finance for founders</div>
-    <div class="foot"><span>Check each provider's terms before you apply.</span><b>omgdiscount.com</b></div>`);
+function defaultCardPng(count) {
+  return renderPng(
+    cardSvg({
+      category: "Startup and AI credits",
+      title: "Startup and AI credits, sorted by value",
+      value: `${count} programs`,
+      unit: "Cloud, AI, dev tools and finance for founders",
+      footnote: "Check each provider's terms before you apply.",
+      logo: "",
+    })
+  );
+}
+
+// Renders every card straight into dist/og/. Called after dist/ is created.
+function renderCards(programs) {
+  const outDir = path.join(DIST, "og");
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(path.join(outDir, "default.png"), defaultCardPng(programs.length));
+  for (const p of programs) fs.writeFileSync(path.join(outDir, p.id + ".png"), programCardPng(p));
 }
 
 function ogTags({ title, description, image, url }) {
@@ -460,26 +529,14 @@ function ogTags({ title, description, image, url }) {
     `<meta property="og:title" content="${t(title)}">`,
     `<meta property="og:description" content="${t(description)}">`,
     `<meta property="og:url" content="${t(url)}">`,
-    image ? `<meta property="og:image" content="${t(image)}">` : "",
-    image ? `<meta property="og:image:width" content="1200">` : "",
-    image ? `<meta property="og:image:height" content="630">` : "",
-    `<meta name="twitter:card" content="${image ? "summary_large_image" : "summary"}">`,
+    `<meta property="og:image" content="${t(image)}">`,
+    `<meta property="og:image:width" content="${CARD_W}">`,
+    `<meta property="og:image:height" content="${CARD_H}">`,
+    `<meta name="twitter:card" content="summary_large_image">`,
     `<meta name="twitter:title" content="${t(title)}">`,
     `<meta name="twitter:description" content="${t(description)}">`,
-    image ? `<meta name="twitter:image" content="${t(image)}">` : "",
-  ].filter(Boolean).join("\n");
-}
-
-// Writes HTML cards for rendering, and returns which PNG cards already exist.
-function writeSocialSources(programs) {
-  fs.rmSync(SOCIAL_SRC, { recursive: true, force: true });
-  fs.mkdirSync(SOCIAL_SRC, { recursive: true });
-  fs.writeFileSync(path.join(SOCIAL_SRC, "default.html"), defaultCard(programs.length));
-  for (const p of programs) fs.writeFileSync(path.join(SOCIAL_SRC, p.id + ".html"), programCard(p));
-}
-
-function hasPng(name) {
-  return fs.existsSync(path.join(SOCIAL_PNG, name + ".png"));
+    `<meta name="twitter:image" content="${t(image)}">`,
+  ].join("\n");
 }
 
 // ---------- build ----------
@@ -504,9 +561,8 @@ function build() {
   fs.mkdirSync(path.join(DIST, "categories"), { recursive: true });
   fs.mkdirSync(path.join(DIST, "pages"), { recursive: true });
 
-  writeSocialSources(programs);
-  if (fs.existsSync(SOCIAL_PNG)) fs.cpSync(SOCIAL_PNG, path.join(DIST, "og"), { recursive: true });
-  const defaultImage = hasPng("default") ? `${SITE}/og/default.png` : "";
+  renderCards(programs);
+  const defaultImage = `${SITE}/og/default.png`;
 
   // Listing page and its data.
   fs.writeFileSync(path.join(DIST, "index.html"), fill(fs.readFileSync(path.join(TEMPLATE, "index.html"), "utf8"), { FOOTER: footerHtml(""), META: ogTags({ title: "omgdiscount — startup and AI credits", description: "Startup and AI credits and discounts, sorted by what they are worth.", image: defaultImage, url: SITE + "/" }) }, path.join(TEMPLATE, "index.html")));
@@ -528,7 +584,7 @@ function build() {
         DESCRIPTION: esc(p.meta.description),
         ROOT: "../",
         FOOTER: footerHtml("../"),
-        META: ogTags({ title: `${p.meta.title} — omgdiscount`, description: p.meta.description, image: hasPng(p.id) ? `${SITE}/og/${p.id}.png` : defaultImage, url: `${SITE}/programs/${p.id}.html` }),
+        META: ogTags({ title: `${p.meta.title} — omgdiscount`, description: p.meta.description, image: `${SITE}/og/${p.id}.png`, url: `${SITE}/programs/${p.id}.html` }),
         MAIN: programMain(p) + "\n\n      " + relatedHtml(p, programs),
       },
       path.join(TEMPLATE, "program.html")
