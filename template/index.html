@@ -238,7 +238,7 @@
   .expired-toggle[hidden] { display: none; }
   .tagcloud { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 24px; }
   .tagcloud:empty { display: none; }
-  .tagchip { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--rule); background: var(--surface); color: var(--ink-2); font: inherit; line-height: 1; cursor: pointer; box-shadow: var(--highlight); transition: background 160ms var(--ease); }
+  .tagchip { display: inline-flex; align-items: center; gap: 6px; box-sizing: border-box; min-height: 36px; max-width: 100%; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--rule); background: var(--surface); color: var(--ink-2); font-family: var(--sans); font-weight: 500; letter-spacing: 0; line-height: 1.2; white-space: nowrap; cursor: pointer; box-shadow: var(--highlight); transition: background 160ms var(--ease); }
   .tagchip:hover { border-color: var(--ink); }
   .tagchip small { font-size: 12px; color: var(--faint); }
   .tagchip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
@@ -348,7 +348,7 @@
       .filter(o => (state.cat === "all" || o.cat === state.cat) &&
         (state.stage === "all" || o.stages.includes(state.stage)) &&
         (state.showExpired || !o.expired) &&
-        (state.tags.length === 0 || o.tags.some(t => state.tags.includes(t))) &&
+        (state.tags.length === 0 || (o.tags || []).some(t => state.tags.includes(t))) &&
         (!q || [o.name, o.benefit, o.elig, o.unit, CAT_LABEL[o.cat]].join(" ").toLowerCase().includes(q)))
       .sort(SORTS[state.sort]);
   }
@@ -521,7 +521,7 @@
   const TAG_LABEL = (t) => t.replace(/-/g, " ");
   function renderTagCloud() {
     const counts = {};
-    OFFERS.forEach(o => o.tags.forEach(t => { counts[t] = (counts[t] || 0) + 1; }));
+    OFFERS.forEach(o => (o.tags || []).forEach(t => { counts[t] = (counts[t] || 0) + 1; }));
     const tags = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
     const max = Math.max(1, ...Object.values(counts));
     $("tagcloud").innerHTML = tags.map(t => {
@@ -539,7 +539,7 @@
     render();
   });
   const urlTag = new URLSearchParams(location.search).get("tag");
-  if (urlTag && OFFERS.some(o => o.tags.includes(urlTag))) state.tags = [urlTag];
+  if (urlTag && OFFERS.some(o => (o.tags || []).includes(urlTag))) state.tags = [urlTag];
   renderTagCloud();
 
   const expiredCount = OFFERS.filter(o => o.expired).length;
