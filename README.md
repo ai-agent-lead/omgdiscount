@@ -29,7 +29,7 @@ The build exits with an error and lists every problem it finds, so a broken post
 
 ## Deploy
 
-`.github/workflows/build.yml` runs on every push to `main`. It builds `dist/` and deploys it to GitHub Pages. Pull requests run the build only. In the repo settings, set Pages → Source to "GitHub Actions" once.
+Cloudflare Pages builds the site from this repo on every push to `main`. Project settings: build command `node scripts/build.js`, build output directory `dist`. No GitHub Actions workflow is used.
 
 ## Sample data
 
