@@ -16,7 +16,7 @@ dist/               build output, rebuilt from scratch on every run
 ## Add or change a program
 
 1. Copy `content/programs/_template.md` to a new file, or edit an existing post.
-2. Fill the frontmatter. `type: program` and `title` are required. `category` is one of `cloud`, `ai`, `dev`, `ops`. `stages` is a list from `pre`, `seed`, `a`. `value: 0` shows "Waived". `tags` is an optional list of lowercase hyphenated words that drive the tag cloud and `?tag=` filter. Reuse the existing ones before adding a new one: topics (`cloud`, `hosting`, `database`, `gpu`, `ai`, `voice`, `frontend`, `developer-tools`, and one-offs such as `analytics`), program type (`startup-credits`, `student`, `open-source`, `nonprofit`, `research`, `free`, `trial`), and access (`referral` when an investor, accelerator or partner must refer you, `no-funding-needed`). Tag `ai` when the post sets `ai: true`.
+2. Fill the frontmatter. `type: program` and `title` are required. `category` is one of `cloud`, `ai`, `dev`, `ops`. `stages` is a list from `pre`, `seed`, `a`. `value: 0` shows "Waived". `tags` is an optional list of lowercase hyphenated words that drive the tag cloud and `?tag=` filter. Reuse the existing ones before adding a new one: topics (`cloud`, `hosting`, `database`, `gpu`, `ai`, `voice`, `frontend`, `developer-tools`, and one-offs such as `analytics`), program type (`startup-credits`, `student`, `open-source`, `nonprofit`, `research`, `education`, `free`, `trial`), and access (`referral` when an investor, accelerator or partner must refer you, `no-funding-needed`). Tag `ai` when the post sets `ai: true`.
 3. Write the body under `## What it is` and `## What you can use it for`. Blank lines separate paragraphs. No other markdown is rendered.
 4. Build and check:
 
