@@ -465,7 +465,7 @@ function cardSvg({ category, title, value, unit, footnote, logo }) {
   <circle cx="1040" cy="40" r="480" fill="url(#glow)"/>
   <circle cx="88" cy="76" r="15" fill="url(#coin)"/>
   <polygon points="88,66 98,76 88,86 78,76" fill="#1c1917"/>
-  <text x="112" y="88" font-size="32" font-weight="700" fill="${ink.text}" letter-spacing="-1">mg<tspan fill="${ink.gold}">discount</tspan></text>
+  <text x="106" y="88" font-size="32" font-weight="700" fill="${ink.text}" letter-spacing="-1">mg<tspan fill="${ink.gold}">discount</tspan></text>
   ${logo}
   <text x="72" y="300" font-size="22" font-weight="700" fill="${ink.tag}" letter-spacing="1">${esc(category.toUpperCase())}</text>
   ${titleSvg}
@@ -494,7 +494,7 @@ function programCardPng(p) {
       title: m.title,
       value,
       unit: truncate(m.unit, 60),
-      footnote: truncate(p.what, 90),
+      footnote: truncate(p.what, 60),
       logo: inlineLogo(m.logo, 888, 52, 240, 52),
     })
   );
