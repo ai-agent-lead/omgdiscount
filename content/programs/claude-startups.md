@@ -7,6 +7,7 @@ order: 51
 short: "Anthropic"
 logo: "anthropic"
 category: "ai"
+tags: ["ai","startup-credits"]
 value: 45000
 unit: "USD in partner discounts and credits (Claude Startup Stack)"
 ai: true

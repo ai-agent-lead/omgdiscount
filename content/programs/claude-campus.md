@@ -7,6 +7,7 @@ order: 52
 short: "Anthropic"
 logo: "anthropic"
 category: "ai"
+tags: ["ai","student"]
 value: 3600
 unit: "USD cash stipend for selected campus ambassadors"
 ai: true

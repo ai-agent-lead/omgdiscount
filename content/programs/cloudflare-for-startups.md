@@ -7,6 +7,7 @@ order: 11
 short: "Cloudflare"
 logo: "cloudflare"
 category: "cloud"
+tags: ["cloud","hosting","startup-credits","referral"]
 value: 350000
 unit: "USD credits, one year (ceiling)"
 ai: false

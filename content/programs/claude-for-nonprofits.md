@@ -7,6 +7,7 @@ order: 30
 short: "Anthropic"
 logo: "anthropic"
 category: "ai"
+tags: ["ai","nonprofit"]
 value: 0
 unit: "Nonprofit Team rates from $3 to $8 per user per month"
 ai: true

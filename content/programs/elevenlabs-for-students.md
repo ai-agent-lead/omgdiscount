@@ -7,6 +7,7 @@ order: 18
 short: "ElevenLabs"
 logo: "elevenlabs"
 category: "ai"
+tags: ["ai","voice","student"]
 value: 0
 unit: "3 months of Creator plan, plus 1 year of ElevenReader Ultra"
 ai: true

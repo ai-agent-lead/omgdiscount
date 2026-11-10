@@ -7,6 +7,7 @@ order: 9
 short: "Neon"
 logo: "neon"
 category: "cloud"
+tags: ["database","cloud","startup-credits","referral"]
 value: 200000
 unit: "USD credits for Neon and Databricks (ceiling)"
 ai: false
