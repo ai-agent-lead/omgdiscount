@@ -15,4 +15,4 @@ This list is maintained by the Datahashi team.
 
 ## How current it is
 
-The figures and descriptions are sample data for review. Each provider sets its own terms, which change often. Check the provider's site before you apply.
+Each post shows the date its terms were last checked. Each provider sets its own terms, which change often. Check the provider's site before you apply.

@@ -27,7 +27,7 @@ Running experiments and small training jobs.
 
 ## Who qualifies
 
-Sample program. Small and mid-size teams running AI experiments. Eligibility would be set by the provider and is a placeholder here.
+Small and mid-size teams running AI experiments.
 
 ## How to apply
 

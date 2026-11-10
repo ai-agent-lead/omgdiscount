@@ -9,11 +9,11 @@ logo: "microsoft-azure"
 category: "cloud"
 value: 150000
 unit: "USD Azure credits"
-ai: true
-benefit: "Azure credits with access to model services in Azure AI"
-elig: "Company-verified, founder-led"
+ai: false
+benefit: "Up to $150,000 in Azure credits, plus free access to AI models through Azure"
+elig: "Privately held, for-profit software startups; no funding required"
 stages: ["pre", "seed"]
-gate: ""
+gate: "Full amount may need referral"
 apply_url: "https://www.microsoft.com/en-us/startups"
 ---
 
@@ -27,11 +27,15 @@ Hosting apps and APIs, calling hosted models without managing GPUs.
 
 ## Who qualifies
 
-Privately held startups with a product or prototype and a company website. You do not need outside funding. Credit amount and benefits vary by program tier.
+Your startup must build a software product or service, be privately held and for-profit, and be eligible at the company level.
+
+The program page advertises up to $150,000, but third-party guides tie the full amount to a referral. Existing paid Azure customers and some company types (agencies, consultancies) are usually excluded.
+
+Validity periods differ between sources, so check the period on your approval email.
 
 ## How to apply
 
-1. Sign in to the Founders Hub site with a Microsoft account.
-2. Complete the startup profile: company name, website, product description and team size.
-3. Verify the company and wait for approval.
-4. Activate the Azure credits from the dashboard and link them to a subscription.
+1. Sign in to foundershub.startups.microsoft.com with a Microsoft account.
+2. Complete the startup profile: company name, website, product and team size.
+3. Verify the company and wait for the decision.
+4. Activate the Azure credits and link them to a subscription.

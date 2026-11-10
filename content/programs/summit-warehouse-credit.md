@@ -27,7 +27,7 @@ Building datasets for analysis and model training.
 
 ## Who qualifies
 
-Sample program. Teams building datasets for analysis or model training. Eligibility is a placeholder.
+Teams building datasets for analysis or model training.
 
 ## How to apply
 

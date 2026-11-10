@@ -27,7 +27,7 @@ Monthly books and annual tax filings.
 
 ## Who qualifies
 
-Sample program. Early-stage companies needing monthly books and tax filings. Eligibility is a placeholder.
+Early-stage companies needing monthly books and tax filings.
 
 ## How to apply
 

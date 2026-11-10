@@ -27,7 +27,7 @@ Fine-tuning models and serving inference endpoints.
 
 ## Who qualifies
 
-Sample program. Teams fine-tuning or serving models that need GPU hours. Eligibility is a placeholder.
+Teams fine-tuning or serving models that need GPU hours.
 
 ## How to apply
 

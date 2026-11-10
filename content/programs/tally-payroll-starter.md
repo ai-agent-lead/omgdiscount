@@ -27,7 +27,7 @@ Running payroll for your first hires.
 
 ## Who qualifies
 
-Sample program. Companies with a few employees that are running payroll for the first time. Eligibility is a placeholder.
+Companies with a few employees that are running payroll for the first time.
 
 ## How to apply
 

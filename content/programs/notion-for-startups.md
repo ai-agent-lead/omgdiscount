@@ -7,13 +7,13 @@ order: 7
 short: "Notion"
 logo: "notion"
 category: "ops"
-value: 6000
-unit: "Plan credit"
+value: 0
+unit: "6 months free on Business plan (partner offer)"
 ai: false
-benefit: "Team workspace on a paid plan at no cost"
-elig: "Eligible startups; verify with the program"
-stages: ["pre", "seed", "a"]
-gate: ""
+benefit: "6 months free on the Business plan with Notion AI through a partner; 3 months without a partner; 1 month for some businesses"
+elig: "Startups with fewer than 100 employees and a valid company domain; net new customers only"
+stages: ["pre", "seed"]
+gate: "Partner code for the 6-month offer"
 apply_url: "https://www.notion.com/"
 ---
 
@@ -27,11 +27,15 @@ Team docs, roadmaps, and light CRM or hiring trackers.
 
 ## Who qualifies
 
-Early-stage startups with a small team. Eligibility depends on company size and funding, and the offer is a discount on Notion plans.
+The 6-month offer needs a partner's code, fewer than 100 employees and a valid company domain. Only new, non-paying customers qualify.
+
+Without a partner, the 3-month offer depends on Notion verifying your startup eligibility.
+
+Each offer can be redeemed once and cannot be combined with other offers.
 
 ## How to apply
 
-1. Check the Notion for Startups page for the current size and funding rules.
-2. Apply with your company email and a short description of the company.
-3. Wait for the approval email with the discount code.
-4. Apply the code when you upgrade or change your workspace plan.
+1. Ask your partner for their Notion code, or start from notion.com/startups.
+2. Fill in the startup form and company domain details.
+3. Wait for Notion to verify eligibility.
+4. Apply the offer when you upgrade or change your workspace plan.

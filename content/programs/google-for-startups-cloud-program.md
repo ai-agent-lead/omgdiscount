@@ -7,13 +7,13 @@ order: 1
 short: "Google Cloud"
 logo: "google-cloud"
 category: "cloud"
-value: 350000
-unit: "USD credits"
+value: 100000
+unit: "USD credits, year 1 (Scale tier)"
 ai: true
-benefit: "Cloud credits plus technical support for AI workloads"
-elig: "Referral or accelerator; scaled by stage"
+benefit: "Up to $100,000 in Google Cloud credits in year 1, plus up to $100,000 in year 2 (AI tier: up to $250,000 in year 1)"
+elig: "Startups with a Pre-Seed/Seed round in the last 5 years, or a Series A in the last 12 months (Scale tier)"
 stages: ["seed", "a"]
-gate: "Needs referral"
+gate: "Needs VC funding or accelerator referral"
 apply_url: "https://cloud.google.com/startup"
 ---
 
@@ -27,11 +27,15 @@ Hosting model training and inference, data pipelines, APIs.
 
 ## Who qualifies
 
-Early-stage startups that are privately held and building on or moving to Google Cloud. Access is usually through a referral from a partner such as a VC fund or accelerator, and the credit amount depends on your funding stage.
+The Scale tier is for VC-backed startups: a Pre-Seed or Seed round in the last 5 years, or a Series A in the last 12 months, founded within the last 5 years.
+
+A Start tier exists for digital-native startups with a working MVP that have not yet raised venture funding. The AI tier is for AI-first startups founded within the last 10 years that have not received more than $5,000 in Google Cloud credits.
+
+Acceptance is at Google's discretion, and criteria change between years.
 
 ## How to apply
 
-1. Confirm your stage and check which credit tier fits, on the Google for Startups Cloud page.
-2. Get a referral from an eligible partner, or apply through the program's accelerator route.
-3. Submit the application with your company details, funding history and intended use.
-4. After approval, the credits are added to a Cloud billing account you link to your projects.
+1. Check which tier matches your funding and product stage on cloud.google.com/startup.
+2. Apply, or get a referral from an eligible VC or accelerator partner.
+3. Submit company details, funding history and your intended workload.
+4. After approval, the credits attach to a Cloud billing account you link to your projects.

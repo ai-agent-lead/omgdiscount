@@ -270,7 +270,7 @@ function programMain(p) {
             <dt>Requires</dt><dd>${esc(m.gate || "Nothing extra")}</dd>
           </dl>
           ${m.apply_url ? `<a class="apply" href="${esc(m.apply_url)}" target="_blank" rel="noopener">Apply on provider site</a>` : `<span class="apply off" aria-disabled="true">No provider link yet</span>`}
-          <p class="note">Sample data · checked ${esc(m.timestamp)}</p>
+          <p class="note">Last checked ${esc(m.timestamp)}</p>
         </aside>
       </div>`;
 }
@@ -326,7 +326,7 @@ function footerHtml(root) {
       </nav>
     </div>
     <div class="foot-base">
-      <p>Sample figures for this prototype. Confirm each program's current terms, stage rules and eligibility on the provider's site before you apply. Logos are single-colour marks from Simple Icons (CC0); brand names belong to their owners.</p>
+      <p>Check each provider's current terms, stage rules and eligibility on the provider's site before you apply. Logos are single-colour marks from Simple Icons (CC0); brand names belong to their owners.</p>
       <p class="credit">This list is maintained by the <a href="https://datahashi.com" target="_blank" rel="noopener">Datahashi</a> team. Thank you for the buttons, soft shadows and dot grid this page is styled after.</p>
     </div>
   </footer>`;

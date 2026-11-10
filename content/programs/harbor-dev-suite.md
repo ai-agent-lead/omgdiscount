@@ -27,7 +27,7 @@ Running builds and deploying preview environments.
 
 ## Who qualifies
 
-Sample program. Small engineering teams that need CI and preview deploys. Eligibility is a placeholder.
+Small engineering teams that need CI and preview deploys.
 
 ## How to apply
 

@@ -27,7 +27,7 @@ Drafting founder agreements and hiring documents.
 
 ## Who qualifies
 
-Sample program. Founders who need standard contracts and option paperwork. Eligibility is a placeholder.
+Founders who need standard contracts and option paperwork.
 
 ## How to apply
 

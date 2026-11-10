@@ -7,13 +7,13 @@ order: 8
 short: "Stripe Atlas"
 logo: "stripe-atlas"
 category: "ops"
-value: 500
-unit: "Incorporation discount"
+value: 150
+unit: "USD off Atlas fee (partner link; varies)"
 ai: false
-benefit: "Company formation and banking setup"
-elig: "New company incorporated through Atlas"
+benefit: "Atlas list price is $500. Partner links reduce the incorporation fee; reported discounts run from $50 to $250"
+elig: "New companies incorporating through Stripe Atlas, using a partner link"
 stages: ["pre"]
-gate: ""
+gate: "Needs a partner link"
 apply_url: "https://stripe.com/atlas"
 ---
 
@@ -27,11 +27,15 @@ Forming a US company, opening a bank account, and taking your first payments.
 
 ## Who qualifies
 
-New companies that incorporate through Stripe Atlas. The partner discount is offered through the referral or partner page and applies to the Atlas package.
+Atlas is for founders forming a new company. The list price is $500 and includes government fees and a first year of registered-agent service.
+
+Discounts come from specific partner links, not a Stripe-wide promotion. Amounts vary by partner and some pages are out of date, so check the link you use.
+
+Stripe also lists product credits for the first year, which depend on the offer.
 
 ## How to apply
 
-1. Start an Atlas incorporation and enter your company details.
-2. Enter the partner code at checkout, if the partner offer is still open.
-3. Complete the formation steps: founders, cap table and documents.
-4. Keep the discount confirmation with your incorporation records.
+1. Start from the partner link, or from stripe.com/atlas.
+2. Enter your company details, founders and cap table.
+3. Pay the reduced fee shown at checkout.
+4. Keep the incorporation confirmation with your company records.

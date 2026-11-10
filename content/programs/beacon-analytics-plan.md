@@ -27,7 +27,7 @@ Tracking funnels and retention for your first users.
 
 ## Who qualifies
 
-Sample program. Early product teams tracking funnels and retention. Eligibility is a placeholder.
+Early product teams tracking funnels and retention.
 
 ## How to apply
 

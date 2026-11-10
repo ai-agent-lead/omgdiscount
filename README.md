@@ -31,6 +31,6 @@ The build exits with an error and lists every problem it finds, so a broken post
 
 Cloudflare Pages builds the site from this repo on every push to `main`. Project settings: build command `node scripts/build.js`, build output directory `dist`. No GitHub Actions workflow is used.
 
-## Sample data
+## Data
 
-Program figures and descriptions are placeholders for review. Confirm each provider's current terms before relying on them.
+Each post shows its terms and the date they were last checked. Confirm each provider's current terms before relying on them.

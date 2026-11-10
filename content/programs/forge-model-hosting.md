@@ -27,7 +27,7 @@ Serving a model behind your product's API.
 
 ## Who qualifies
 
-Sample program. Teams serving open-source models behind an API. Eligibility is a placeholder.
+Teams serving open-source models behind an API.
 
 ## How to apply
 

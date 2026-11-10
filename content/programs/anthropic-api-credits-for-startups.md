@@ -7,13 +7,13 @@ order: 5
 short: "Anthropic"
 logo: "anthropic"
 category: "ai"
-value: 25000
-unit: "API credits"
+value: 5000
+unit: "USD API credits (direct application, reported)"
 ai: true
-benefit: "Model usage to build and test your first product"
-elig: "Apply with a clear use case"
-stages: ["pre", "seed"]
-gate: ""
+benefit: "API credits for building on Claude. Reported tiers run from $5,000 to $100,000; awards are discretionary"
+elig: "Early-stage startups building on the Claude API; eligibility set at Anthropic's discretion"
+stages: ["pre", "seed", "a"]
+gate: "Equity funding may be required"
 apply_url: "https://www.anthropic.com/"
 ---
 
@@ -27,11 +27,15 @@ Chat features, summarization, data extraction, and agents inside your product.
 
 ## Who qualifies
 
-Startups building a product that calls the Claude API. Terms, credit amounts and eligibility are set by Anthropic and can change, so check the current offer before applying.
+Anthropic's startup program terms say eligibility is decided at Anthropic's sole discretion. Awards may include API credits, priority rate limits or other resources.
+
+Third-party guides say larger tiers need a referral from a partner VC, and that credits need institutional equity funding. Anthropic's own terms do not confirm these conditions.
+
+Program status changes; one guide reports it as full. Check claude.com/programs/startups before you apply.
 
 ## How to apply
 
-1. Create an account in the Anthropic Console and set up your organization.
-2. Check the current startup credit offer on the Anthropic site.
+1. Create an Anthropic Console account and set up your organization.
+2. Check the current startup offer and whether applications are open.
 3. Submit the application with your product description and expected API usage.
 4. Once approved, the credits appear in your Console billing settings.
