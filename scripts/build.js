@@ -397,6 +397,91 @@ function categoryMain(key, programs) {
 }
 
 
+// ---------- social cards and share tags ----------
+
+const SITE = "https://omgdiscount.com";
+const SOCIAL_SRC = path.join(ROOT, "social-src"); // HTML cards, regenerated each build (git-ignored)
+const SOCIAL_PNG = path.join(ROOT, "social"); // rendered PNG cards, committed; copied to dist/og/
+
+const CARD_CSS = `
+  *{box-sizing:border-box}
+  html,body{margin:0;width:1200px;height:630px;overflow:hidden}
+  body{position:relative;background:#0f172a;color:#f8fafc;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+  body::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgb(255 255 255/.10) 1.5px,transparent 1.5px);background-size:28px 28px}
+  body::after{content:"";position:absolute;right:-220px;top:-260px;width:820px;height:820px;background:radial-gradient(closest-side,rgb(93 97 236/.55),transparent)}
+  .wrap{position:relative;height:100%;padding:60px 72px;display:flex;flex-direction:column}
+  .top{display:flex;justify-content:space-between;align-items:center}
+  .brand{display:flex;align-items:center;font-size:32px;font-weight:800;letter-spacing:-.035em}
+  .coin{position:relative;display:inline-block;width:30px;height:30px;margin-right:2px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fde68a 0%,#f5b82e 48%,#b7791f 100%)}
+  .coin::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:11px;background:#1c1917;border-radius:2px;transform:translate(-50%,-50%) rotate(45deg)}
+  .disc{color:#fcd34d}
+  .plogo{height:52px;max-width:240px;object-fit:contain;object-position:right center;filter:invert(1)}
+  .cat{margin-top:auto;font-size:22px;font-weight:600;color:#a5b4fc;letter-spacing:.02em;text-transform:uppercase}
+  h1{margin:14px 0 0;font-size:72px;line-height:1.04;letter-spacing:-.035em;font-weight:700;max-width:18ch}
+  .value{margin-top:26px;font-size:52px;font-weight:700;color:#fcd34d;letter-spacing:-.02em}
+  .unit{margin-top:6px;font-size:24px;color:#c4cbd6}
+  .foot{margin-top:34px;display:flex;justify-content:space-between;align-items:center;font-size:22px;color:#a3adbd}
+  .foot b{color:#f8fafc;font-weight:600}
+`;
+
+function cardPage(body) {
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>${CARD_CSS}</style></head><body><div class="wrap">${body}</div></body></html>`;
+}
+
+const brandRow = (logoHtml) =>
+  `<div class="top"><span class="brand"><span class="coin"></span>mg<span class="disc">discount</span></span>${logoHtml}</div>`;
+
+function programCard(p) {
+  const m = p.meta;
+  const logo = m.logo ? `<img class="plogo" src="${path.join(LOGOS, m.logo + ".svg")}" alt="">` : "";
+  const value = m.value === 0 ? "Free" : money(m.value);
+  return cardPage(`${brandRow(logo)}
+    <div class="cat">${esc(CATEGORIES[m.category])}</div>
+    <h1>${esc(m.title)}</h1>
+    <div class="value">${esc(value)}</div>
+    <div class="unit">${esc(m.unit)}</div>
+    <div class="foot"><span>${esc(p.what)}</span><b>omgdiscount.com</b></div>`);
+}
+
+function defaultCard(count) {
+  return cardPage(`${brandRow("")}
+    <div class="cat">Startup and AI credits</div>
+    <h1>Startup and AI credits, sorted by what they are worth</h1>
+    <div class="value">${count} programs</div>
+    <div class="unit">Cloud, AI, dev tools and finance for founders</div>
+    <div class="foot"><span>Check each provider's terms before you apply.</span><b>omgdiscount.com</b></div>`);
+}
+
+function ogTags({ title, description, image, url }) {
+  const t = (s) => esc(s);
+  return [
+    `<meta property="og:type" content="website">`,
+    `<meta property="og:site_name" content="omgdiscount">`,
+    `<meta property="og:title" content="${t(title)}">`,
+    `<meta property="og:description" content="${t(description)}">`,
+    `<meta property="og:url" content="${t(url)}">`,
+    image ? `<meta property="og:image" content="${t(image)}">` : "",
+    image ? `<meta property="og:image:width" content="1200">` : "",
+    image ? `<meta property="og:image:height" content="630">` : "",
+    `<meta name="twitter:card" content="${image ? "summary_large_image" : "summary"}">`,
+    `<meta name="twitter:title" content="${t(title)}">`,
+    `<meta name="twitter:description" content="${t(description)}">`,
+    image ? `<meta name="twitter:image" content="${t(image)}">` : "",
+  ].filter(Boolean).join("\n");
+}
+
+// Writes HTML cards for rendering, and returns which PNG cards already exist.
+function writeSocialSources(programs) {
+  fs.rmSync(SOCIAL_SRC, { recursive: true, force: true });
+  fs.mkdirSync(SOCIAL_SRC, { recursive: true });
+  fs.writeFileSync(path.join(SOCIAL_SRC, "default.html"), defaultCard(programs.length));
+  for (const p of programs) fs.writeFileSync(path.join(SOCIAL_SRC, p.id + ".html"), programCard(p));
+}
+
+function hasPng(name) {
+  return fs.existsSync(path.join(SOCIAL_PNG, name + ".png"));
+}
+
 // ---------- build ----------
 
 function build() {
@@ -419,8 +504,12 @@ function build() {
   fs.mkdirSync(path.join(DIST, "categories"), { recursive: true });
   fs.mkdirSync(path.join(DIST, "pages"), { recursive: true });
 
+  writeSocialSources(programs);
+  if (fs.existsSync(SOCIAL_PNG)) fs.cpSync(SOCIAL_PNG, path.join(DIST, "og"), { recursive: true });
+  const defaultImage = hasPng("default") ? `${SITE}/og/default.png` : "";
+
   // Listing page and its data.
-  fs.writeFileSync(path.join(DIST, "index.html"), fill(fs.readFileSync(path.join(TEMPLATE, "index.html"), "utf8"), { FOOTER: footerHtml("") }, path.join(TEMPLATE, "index.html")));
+  fs.writeFileSync(path.join(DIST, "index.html"), fill(fs.readFileSync(path.join(TEMPLATE, "index.html"), "utf8"), { FOOTER: footerHtml(""), META: ogTags({ title: "omgdiscount — startup and AI credits", description: "Startup and AI credits and discounts, sorted by what they are worth.", image: defaultImage, url: SITE + "/" }) }, path.join(TEMPLATE, "index.html")));
   fs.writeFileSync(path.join(DIST, "data.js"), dataJs(programs));
 
   // Logos.
@@ -439,6 +528,7 @@ function build() {
         DESCRIPTION: esc(p.meta.description),
         ROOT: "../",
         FOOTER: footerHtml("../"),
+        META: ogTags({ title: `${p.meta.title} — omgdiscount`, description: p.meta.description, image: hasPng(p.id) ? `${SITE}/og/${p.id}.png` : defaultImage, url: `${SITE}/programs/${p.id}.html` }),
         MAIN: programMain(p) + "\n\n      " + relatedHtml(p, programs),
       },
       path.join(TEMPLATE, "program.html")
@@ -446,14 +536,14 @@ function build() {
     fs.writeFileSync(path.join(DIST, "programs", p.id + ".html"), html);
   }
 
-  const shell = (title, description, main) =>
-    fill(programTpl, { TITLE: esc(title), DESCRIPTION: esc(description), ROOT: "../", FOOTER: footerHtml("../"), MAIN: main }, path.join(TEMPLATE, "program.html"));
+  const shell = (title, description, main, urlPath) =>
+    fill(programTpl, { TITLE: esc(title), DESCRIPTION: esc(description), ROOT: "../", FOOTER: footerHtml("../"), META: ogTags({ title, description, image: defaultImage, url: `${SITE}/${urlPath}` }), MAIN: main }, path.join(TEMPLATE, "program.html"));
 
   for (const key of Object.keys(CATEGORIES)) {
-    fs.writeFileSync(path.join(DIST, "categories", key + ".html"), shell(`${CATEGORIES[key]} — omgdiscount`, CAT_DESC[key], categoryMain(key, programs)));
+    fs.writeFileSync(path.join(DIST, "categories", key + ".html"), shell(`${CATEGORIES[key]} — omgdiscount`, CAT_DESC[key], categoryMain(key, programs), `categories/${key}.html`));
   }
   for (const pg of pages) {
-    fs.writeFileSync(path.join(DIST, "pages", pg.slug + ".html"), shell(`${pg.meta.title} — omgdiscount`, pg.meta.description, pageMain(pg)));
+    fs.writeFileSync(path.join(DIST, "pages", pg.slug + ".html"), shell(`${pg.meta.title} — omgdiscount`, pg.meta.description, pageMain(pg), `pages/${pg.slug}.html`));
   }
 
   console.log(`Built ${programs.length} programs, ${Object.keys(CATEGORIES).length} category pages and ${pages.length} pages into ${path.relative(ROOT, DIST)}/`);
