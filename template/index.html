@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Founder credits — omgdiscount</title>
+<style>
+  :root {
+    --bg: #f5f0e8;
+    --surface: #fbf8f3;
+    --ink: #0a0a0a;
+    --ink-2: #27272a;
+    --muted: #4b4b53;
+    --faint: #5c5c65;
+    --rule: rgb(0 0 0 / .18);
+    --rule-soft: rgb(0 0 0 / .10);
+    --tag-bg: #e6dfd2;
+    --accent-fg: #1e40af;
+    --accent-soft: #dbeafe;
+    --gate-fg: #78350f;
+    --gate-bg: #fef3c7;
+    --focus: #1d4ed8;
+    --c-cloud: #1e40af;
+    --c-ai: #0f766e;
+    --c-dev: #b45309;
+    --c-ops: #6b21a8;
+    --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --accent: #4f46e5;
+    --accent-hover: #4338ca;
+    --on-accent: #ffffff;
+    --shadow-soft: 0 0 0 1px rgb(0 0 0 / .06), 0 1px 2px rgb(0 0 0 / .04), 0 12px 32px -20px rgb(0 0 0 / .2);
+    --highlight: inset 0 1px 0 0 #fff;
+    --ease: cubic-bezier(.25, .8, .25, 1);
+    --dot: rgb(0 0 0 / .08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a;
+      --surface: #162036;
+      --ink: #f8fafc;
+      --ink-2: #e2e8f0;
+      --muted: #c4cbd6;
+      --faint: #a3adbd;
+      --rule: rgb(255 255 255 / .18);
+      --rule-soft: rgb(255 255 255 / .10);
+      --tag-bg: #1e2a44;
+      --accent-fg: #bfdbfe;
+      --accent-soft: #1e3a8a;
+      --gate-fg: #fde68a;
+      --gate-bg: #3f2e06;
+      --focus: #93c5fd;
+      --dot: rgb(255 255 255 / .09);
+      --accent: #5d61ec;
+      --accent-hover: #7174f2;
+      --on-accent: #ffffff;
+      --shadow-soft: inset 0 1px 0 0 rgb(255 255 255 / .08), 0 0 0 1px rgb(255 255 255 / .1), 0 24px 48px -32px #000;
+      --highlight: inset 0 1px 0 0 rgb(255 255 255 / .18);
+      --c-cloud: #93c5fd;
+      --c-ai: #5eead4;
+      --c-dev: #fcd34d;
+      --c-ops: #d8b4fe;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { background: var(--bg); }
+  body { margin: 0; background: transparent; color: var(--ink-2); font-family: var(--sans); font-size: 16px; line-height: 1.47; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 1040px; margin: 0 auto; padding: 0 32px 120px; }
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px); background-size: 24px 24px;
+    -webkit-mask-image: radial-gradient(100% 60% at 50% 0, #000 25%, transparent 75%);
+    mask-image: radial-gradient(100% 60% at 50% 0, #000 25%, transparent 75%);
+  }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+
+  .bar { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+  .wordmark { display: inline-block; font-size: 20px; font-weight: 800; letter-spacing: -0.035em; color: var(--ink); text-decoration: none; line-height: 1; white-space: nowrap; }
+  .wordmark .disc { color: var(--c-dev); }
+  .wordmark .coin { position: relative; display: inline-block; width: .92em; height: .92em; border-radius: 50%; vertical-align: -.14em; background: radial-gradient(circle at 35% 30%, #fde68a 0%, #f5b82e 48%, #b7791f 100%); box-shadow: inset 0 0 0 .06em rgb(255 255 255 / .35), inset 0 -.08em 0 .06em rgb(120 53 15 / .25); }
+  .wordmark .coin::after { content: ""; position: absolute; left: 50%; top: 50%; width: .38em; height: .38em; background: #1c1917; border-radius: .05em; transform: translate(-50%, -50%) rotate(45deg); }
+  .bar-note { font-size: 13px; color: var(--muted); }
+
+  /* hero */
+  .hero { padding: 48px 0 40px; text-align: center; }
+  .hero-label { font-size: 19px; font-weight: 500; color: var(--muted); margin: 0 0 4px; letter-spacing: -0.015em; }
+  .hero-value { font-size: clamp(60px, 11vw, 136px); font-weight: 600; line-height: 1; letter-spacing: -0.045em; color: var(--ink); margin: 0; font-variant-numeric: tabular-nums lining-nums; }
+  .hero-facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; margin: 20px 0 0; padding: 0; list-style: none; font-size: 15px; color: var(--muted); }
+  .hero-facts li + li::before { content: "·"; margin-right: 20px; color: var(--faint); }
+
+  /* share of value by category */
+  .split { margin-top: 40px; }
+  .split-bar { display: flex; height: 12px; border-radius: 999px; overflow: hidden; background: var(--tag-bg); gap: 3px; }
+  .split-bar span { height: 100%; transition: flex-grow 320ms var(--ease); }
+  .split-legend { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 16px; font-size: 14px; color: var(--muted); list-style: none; padding: 0; }
+  .split-legend li { display: flex; align-items: center; gap: 8px; }
+  .split-legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+  .split-legend b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  /* filters */
+  .filters { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin-top: 48px; padding: 16px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .group { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px; }
+  .group-label { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); margin-right: 4px; }
+  .filter { background: none; border: 0; padding: 8px 0; font: inherit; font-size: 15px; color: var(--muted); cursor: pointer; transition: color 160ms var(--ease); min-height: 40px; }
+  .filter:hover { color: var(--ink); }
+  .filter[aria-pressed="true"] { color: var(--ink); font-weight: 600; }
+  .filter small { font-size: 12px; margin-left: 3px; color: var(--faint); font-variant-numeric: tabular-nums; font-weight: 400; }
+  .tools { display: flex; align-items: center; gap: 16px; }
+  .search input { width: 180px; padding: 8px 0; background: none; border: 0; border-bottom: 1px solid var(--rule); color: var(--ink); font: inherit; font-size: 15px; border-radius: 0; transition: border-color 160ms var(--ease); min-height: 40px; }
+  .search input::placeholder { color: var(--faint); }
+  .search input:focus { outline: none; border-bottom-color: var(--ink); }
+  .stage { background: none; border: 0; font: inherit; font-size: 15px; color: var(--ink); padding: 8px 20px 8px 0; cursor: pointer; min-height: 40px; }
+  .count { margin: 16px 0 0; font-size: 14px; color: var(--muted); }
+
+  /* featured offer */
+  .feature { margin-top: 32px; background: var(--surface); box-shadow: var(--shadow-soft); border-radius: 20px; padding: 40px; display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 48px; }
+  .feature .name { font-size: 36px; }
+  .feature .facts { grid-template-columns: 120px minmax(0, 1fr); }
+  .feature .amount-value { font-size: 52px; }
+  .feature .apply { width: 100%; margin-top: 24px; height: 48px; font-size: 16px; }
+  .feature-label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 40px 0 0; font-weight: 600; }
+
+  /* shared pieces */
+  .head { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .tag { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 999px; background: var(--tag-bg); font-size: 12px; color: var(--ink-2); font-weight: 500; }
+  .tag.ai { color: var(--accent-fg); background: var(--accent-soft); }
+  .tag.gate { color: var(--gate-fg); background: var(--gate-bg); }
+  .title { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .logo { position: relative; display: inline-flex; align-items: center; height: 28px; min-width: 28px; }
+  .logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: left center; opacity: .9; }
+  @media (prefers-color-scheme: dark) { .logo img { filter: invert(1); } }
+  .logo-text { font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: .01em; white-space: nowrap; }
+  .name { font-size: 24px; font-weight: 600; color: var(--ink); margin: 12px 0 0; letter-spacing: -0.02em; line-height: 1.2; }
+  .product { margin: 10px 0 0; font-size: 15px; color: var(--ink-2); max-width: 64ch; }
+  .facts { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 8px 16px; margin: 20px 0 0; font-size: 15px; }
+  .facts dt { color: var(--faint); font-size: 13px; padding-top: 1px; white-space: nowrap; }
+  .facts dd { margin: 0; color: var(--ink-2); }
+  .amount-value { font-size: 28px; font-weight: 600; color: var(--ink); margin: 0; letter-spacing: -0.025em; font-variant-numeric: tabular-nums lining-nums; }
+  .amount-unit { font-size: 14px; color: var(--muted); margin: 4px 0 0; }
+  .apply { display: inline-flex; align-items: center; justify-content: center; height: 40px; padding: 0 20px; border-radius: 999px; background: var(--accent); color: var(--on-accent); text-decoration: none; font-size: 15px; font-weight: 500; box-shadow: var(--highlight), 0 1px 2px rgb(0 0 0 / .12); transition: background 160ms var(--ease); }
+  .apply:hover { background: var(--accent-hover); }
+
+  /* table of the rest */
+  .table { margin-top: 32px; }
+  .row { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 2fr) minmax(0, 1fr) 150px; gap: 24px; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--rule-soft); }
+  .row-head { padding: 0 0 12px; border-bottom: 1px solid var(--rule); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); font-weight: 600; }
+  .row-head .r { text-align: right; }
+  .row .name { font-size: 17px; margin: 0; }
+  .row .logo { margin-bottom: 6px; height: 22px; }
+  .row .logo-text { font-size: 12px; }
+  .row .use { font-size: 15px; color: var(--ink-2); }
+  .row .stages { display: flex; flex-wrap: wrap; gap: 6px; }
+  .row .stages .tag { height: 24px; font-size: 12px; padding: 0 8px; }
+  .row .val { text-align: right; }
+  .row .val .amount-value { font-size: 20px; }
+  .row .val .amount-unit { font-size: 12px; margin-top: 2px; }
+  .row .apply { margin-top: 10px; height: 34px; padding: 0 16px; font-size: 14px; }
+  .row-head .name, .row-head .use { display: block; }
+
+  .split-bar .c-cloud { background: var(--c-cloud); }
+  .split-bar .c-ai { background: var(--c-ai); }
+  .split-bar .c-dev { background: var(--c-dev); }
+  .split-bar .c-ops { background: var(--c-ops); }
+  .split-legend .c-cloud { background: var(--c-cloud); }
+  .split-legend .c-ai { background: var(--c-ai); }
+  .split-legend .c-dev { background: var(--c-dev); }
+  .split-legend .c-ops { background: var(--c-ops); }
+
+  .name-link { color: inherit; text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size 260ms var(--ease); }
+  .name-link:hover { background-size: 100% 1px; }
+  .group-title { font-size: 13px; font-weight: 600; letter-spacing: .02em; color: var(--ink); margin: 40px 0 0; padding-bottom: 10px; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; }
+  .group-title span { color: var(--faint); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .row.muted .name, .row.muted .use, .row.muted .amount-value { color: var(--muted); }
+  .row.muted .logo { opacity: .6; }
+
+  .empty { padding: 96px 0; text-align: center; }
+  .empty p { margin: 0 0 16px; color: var(--muted); font-size: 19px; }
+  .reset { background: none; border: 0; font: inherit; font-size: 15px; color: var(--focus); cursor: pointer; min-height: 40px; }
+  .pager { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rule-soft); font-size: 14px; color: var(--muted); }
+  .pager-btns { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .pg { min-width: 40px; height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--rule); background: var(--surface); color: var(--ink); font: inherit; font-size: 14px; cursor: pointer; box-shadow: var(--shadow-soft); transition: border-color 160ms var(--ease), background 160ms var(--ease); }
+  .pg:hover:not(:disabled) { border-color: var(--ink); }
+  .pg:disabled { opacity: .4; cursor: default; box-shadow: none; }
+  .pg[aria-current="page"] { background: var(--accent); color: var(--on-accent); border-color: var(--accent); box-shadow: var(--highlight); }
+  .site-foot { margin-top: 96px; padding-top: 48px; border-top: 1px solid var(--rule); }
+  .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+  .foot-brand .wordmark { font-size: 22px; }
+  .foot-brand p { margin: 14px 0 0; font-size: 15px; color: var(--muted); max-width: 34ch; }
+  .foot-col h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); font-weight: 600; margin: 0 0 10px; }
+  .foot-col a { display: block; padding: 6px 0; font-size: 15px; color: var(--ink-2); text-decoration: none; min-height: 32px; }
+  .foot-col a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .foot-base { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--rule-soft); display: grid; gap: 10px; font-size: 13px; color: var(--faint); text-wrap: pretty; }
+  .foot-base p { margin: 0; }
+  .foot-base a { color: var(--ink); text-underline-offset: 3px; }
+  @media (max-width: 720px) {
+    .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px 24px; }
+    .foot-brand { grid-column: 1 / -1; }
+    .foot-col a { min-height: 40px; padding: 8px 0; }
+  }
+  .foot { margin-top: 96px; font-size: 13px; color: var(--faint); text-align: center; text-wrap: balance; }
+  [hidden] { display: none !important; }
+
+  @media (max-width: 860px) {
+    .feature { grid-template-columns: 1fr; gap: 28px; padding: 28px; }
+    .feature .amount { text-align: left; }
+    .feature .apply { width: auto; }
+    .row-head { display: none; }
+    .row { grid-template-columns: 1fr; gap: 12px; padding: 24px 0; }
+    .row .val { text-align: left; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+    .row .val .amount-unit { margin-top: 0; }
+    .row .apply { margin-top: 0; justify-self: start; height: 40px; }
+  }
+  @media (max-width: 720px) {
+    .page { padding: 0 20px 96px; }
+    .bar-note { display: none; }
+    .hero { padding: 40px 0 32px; text-align: left; }
+    .hero-label { font-size: 17px; }
+    .hero-facts { flex-direction: column; align-items: flex-start; gap: 4px; font-size: 14px; }
+    .hero-facts li + li::before { content: none; }
+    .split { margin-top: 28px; }
+    .filters { flex-direction: column; align-items: stretch; min-width: 0; margin-top: 36px; }
+    .group { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; min-width: 0; max-width: 100%; margin: 0 -20px; padding: 0 20px; gap: 0 16px; }
+    .group::-webkit-scrollbar { display: none; }
+    .filter { flex-shrink: 0; min-width: 40px; padding: 8px 10px; }
+    .name-link { display: inline-block; padding: 8px 0; margin: -8px 0; }
+    .wordmark { padding: 10px 0; margin: -10px 0; }
+    .tools { width: 100%; justify-content: space-between; }
+    .search input { width: 100%; max-width: 200px; }
+    .feature { padding: 22px; border-radius: 16px; }
+    .feature .name { font-size: 26px; }
+    .feature .facts, .facts { grid-template-columns: 90px minmax(0, 1fr); }
+    .feature .amount-value { font-size: 40px; }
+    .name { font-size: 22px; }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+  .apply.off { opacity: .45; pointer-events: none; box-shadow: none; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="bar">
+    <a class="wordmark" href="index.html" aria-label="omgdiscount home"><span class="coin" aria-hidden="true"></span>mg<span class="disc">discount</span></a>
+    <span class="bar-note">Sample data · checked Nov 2026</span>
+  </header>
+
+  <section class="hero">
+    <p class="hero-label">Total value you can claim</p>
+    <p class="hero-value" id="total" aria-live="polite">$0</p>
+    <ul class="hero-facts" id="facts"></ul>
+  </section>
+
+  <section class="split" aria-label="Value by type">
+    <div class="split-bar" id="split-bar" role="img" aria-label="Share of value by type"></div>
+    <ul class="split-legend" id="split-legend"></ul>
+  </section>
+
+  <nav class="filters" aria-label="Filter offers">
+    <div class="group" role="group" aria-label="Type">
+      <span class="group-label">Type</span>
+      <button class="filter" data-cat="all" aria-pressed="true">All<small id="n-all"></small></button>
+      <button class="filter" data-cat="cloud" aria-pressed="false">Cloud<small id="n-cloud"></small></button>
+      <button class="filter" data-cat="ai" aria-pressed="false">AI and models<small id="n-ai"></small></button>
+      <button class="filter" data-cat="dev" aria-pressed="false">Dev tools<small id="n-dev"></small></button>
+      <button class="filter" data-cat="ops" aria-pressed="false">Finance<small id="n-ops"></small></button>
+    </div>
+    <div class="tools">
+      <select class="stage" id="stage" aria-label="Company stage">
+        <option value="all">Any stage</option>
+        <option value="pre">Pre-seed</option>
+        <option value="seed">Seed</option>
+        <option value="a">Series A+</option>
+      </select>
+      <div class="search">
+        <input id="q" type="search" aria-label="Search offers" placeholder="Search" autocomplete="off">
+      </div>
+    </div>
+  </nav>
+
+  <p class="count" id="count" aria-live="polite"></p>
+
+  <section id="featured" aria-label="Largest offer"></section>
+  <section class="table" id="table" aria-label="Other offers"></section>
+  <nav class="pager" id="pager" aria-label="Pagination" hidden></nav>
+
+  <div class="empty" id="empty" hidden>
+    <p>Nothing matches those filters.</p>
+    <button class="reset" id="reset">Show all offers</button>
+  </div>
+
+  {{FOOTER}}
+</div>
+
+<script src="data.js"></script>
+<script>
+  OFFERS.forEach(o => { Object.assign(o, INFO[o.name]); o.id = o.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""); });
+
+  const CAT_LABEL = { cloud: "Cloud", ai: "AI and models", dev: "Dev tools", ops: "Finance" };
+  const CATS = ["cloud", "ai", "dev", "ops"];
+  const STAGE_LABEL = { pre: "Pre-seed", seed: "Seed", a: "Series A+" };
+  const money = (n) => "$" + n.toLocaleString("en-US");
+  const PAGE_SIZE = 10;
+  const state = { q: "", cat: "all", stage: "all", page: 1 };
+  const $ = (id) => document.getElementById(id);
+
+  // Category counts describe the whole list, not the current search.
+  ["all", ...CATS].forEach(c => {
+    $("n-" + c).textContent = c === "all" ? OFFERS.length : OFFERS.filter(o => o.cat === c).length;
+  });
+
+  function visible() {
+    const q = state.q.trim().toLowerCase();
+    return OFFERS
+      .filter(o => (state.cat === "all" || o.cat === state.cat) &&
+        (state.stage === "all" || o.stages.includes(state.stage)) &&
+        (!q || [o.name, o.benefit, o.elig, o.unit, CAT_LABEL[o.cat]].join(" ").toLowerCase().includes(q)))
+      .sort((a, b) => b.value - a.value);
+  }
+
+  let raf = 0, first = true;
+  function animateTotal(to) {
+    cancelAnimationFrame(raf);
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || !first) { $("total").textContent = money(to); return; }
+    const dur = 700, t0 = performance.now();
+    const step = (t) => {
+      const p = Math.min(1, (t - t0) / dur);
+      $("total").textContent = money(Math.round(to * (1 - Math.pow(1 - p, 3))));
+      if (p < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+  }
+
+  function renderSplit(items) {
+    const totals = CATS.map(c => ({ c, label: CAT_LABEL[c], sum: items.filter(o => o.cat === c).reduce((s, o) => s + o.value, 0) }))
+      .filter(t => t.sum > 0);
+    const sum = totals.reduce((s, t) => s + t.sum, 0);
+    $("split-bar").innerHTML = totals.map(t => `<span class="c-${t.c}" style="flex-grow:${t.sum}" title="${t.label}"></span>`).join("");
+    $("split-legend").innerHTML = totals.map(t =>
+      `<li><i class="c-${t.c}"></i>${t.label} <b>${money(t.sum)}</b>${sum ? ` <span>${Math.round(t.sum / sum * 100)}%</span>` : ""}</li>`
+    ).join("");
+    $("split-bar").hidden = totals.length === 0;
+  }
+
+  function tagsHTML(o) {
+    return `
+      ${o.ai ? `<span class="tag ai">Uses AI</span>` : ""}
+      ${o.stages.map(s => `<span class="tag">${STAGE_LABEL[s]}</span>`).join("")}
+      ${o.gate ? `<span class="tag gate">${o.gate}</span>` : ""}`;
+  }
+  const logoHTML = (o) => `<span class="logo"><img src="logos/${o.logo}.svg" alt="" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'"><span class="logo-text">${o.short}</span></span>`;
+  const valueHTML = (o) => `<p class="amount-value">${o.value === 0 ? "Waived" : money(o.value)}</p><p class="amount-unit">${o.unit}</p>`;
+
+  function renderFeature(o) {
+    if (!o) { $("featured").innerHTML = ""; return; }
+    $("featured").innerHTML = `
+      <p class="feature-label">Largest offer</p>
+      <article class="feature">
+        <div>
+          <div class="head">${tagsHTML(o)}</div>
+          <div class="title">${logoHTML(o)}</div>
+          <h2 class="name"><a class="name-link" href="programs/${o.id}.html">${o.name}</a></h2>
+          <p class="product">${o.what}</p>
+          <dl class="facts">
+            <dt>Use it for</dt><dd>${o.use}</dd>
+            <dt>Benefit</dt><dd>${o.benefit}</dd>
+            <dt>Who</dt><dd>${o.elig}</dd>
+          </dl>
+        </div>
+        <div class="amount">
+          ${valueHTML(o)}
+          ${applyHTML(o)}
+        </div>
+      </article>`;
+  }
+
+  function applyHTML(o) {
+    return o.apply_url
+      ? `<a class="apply" href="${o.apply_url}" target="_blank" rel="noopener">Apply</a>`
+      : `<span class="apply off" aria-disabled="true">Apply</span>`;
+  }
+
+  function rowHTML(o, muted) {
+    return `
+      <article class="row${muted ? " muted" : ""}">
+        <div>
+          ${logoHTML(o)}
+          <h3 class="name"><a class="name-link" href="programs/${o.id}.html">${o.name}</a></h3>
+          <div class="head" style="margin:8px 0 0">${o.gate ? `<span class="tag gate">${o.gate}</span>` : ""}${o.ai ? `<span class="tag ai">Uses AI</span>` : ""}</div>
+        </div>
+        <div class="use">${o.use}</div>
+        <div class="stages">${o.stages.map(s => `<span class="tag">${STAGE_LABEL[s]}</span>`).join("")}</div>
+        <div class="val">${valueHTML(o)}${applyHTML(o)}</div>
+      </article>`;
+  }
+
+  // Ready-now offers first, at full weight; offers that need something first are grouped below and quieter.
+  function renderTable(all) {
+    const start = (state.page - 1) * PAGE_SIZE;
+    const rest = all.slice(start, start + PAGE_SIZE);
+    if (rest.length === 0) { $("table").innerHTML = ""; return; }
+    const ready = rest.filter(o => !o.gate);
+    const gated = rest.filter(o => o.gate);
+    const section = (title, count, body) => body ? `
+      <h2 class="group-title">${title} <span>${count}</span></h2>
+      ${body}` : "";
+    $("table").innerHTML = `
+      <div class="row row-head" aria-hidden="true">
+        <span>Program</span><span>Use it for</span><span>Stage</span><span class="r">Value</span>
+      </div>` +
+      section("Apply now", ready.length, ready.map(o => rowHTML(o, false)).join("")) +
+      section("Needs something first", gated.length, gated.map(o => rowHTML(o, true)).join(""));
+  }
+
+  function renderPager(total) {
+    const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    state.page = Math.min(state.page, pages);
+    const pager = $("pager");
+    pager.hidden = total <= PAGE_SIZE;
+    if (total <= PAGE_SIZE) { pager.innerHTML = ""; return; }
+    const from = (state.page - 1) * PAGE_SIZE + 1;
+    const to = Math.min(total, state.page * PAGE_SIZE);
+    pager.innerHTML = `
+      <span class="pager-info">${from}–${to} of ${total}</span>
+      <div class="pager-btns">
+        <button class="pg" data-go="prev" aria-label="Previous page" ${state.page === 1 ? "disabled" : ""}>← Previous</button>
+        ${Array.from({ length: pages }, (_, i) => `<button class="pg num" data-page="${i + 1}" aria-label="Page ${i + 1}" ${i + 1 === state.page ? `aria-current="page"` : ""}>${i + 1}</button>`).join("")}
+        <button class="pg" data-go="next" aria-label="Next page" ${state.page === pages ? "disabled" : ""}>Next →</button>
+      </div>`;
+  }
+
+  function renderFacts(items) {
+    const aiCount = items.filter(o => o.ai).length;
+    const openNoGate = items.filter(o => !o.gate).length;
+    $("facts").innerHTML = [
+      `<li>${items.length} ${items.length === 1 ? "program" : "programs"}</li>`,
+      `<li>${aiCount} for AI workloads</li>`,
+      `<li>${openNoGate} with no extra requirement</li>`
+    ].join("");
+  }
+
+  function render() {
+    const items = visible();
+    const total = items.reduce((s, o) => s + o.value, 0);
+    animateTotal(total);
+    first = false;
+    renderSplit(items);
+    renderFacts(items);
+    renderFeature(items[0]);
+    renderTable(items.slice(1));
+    renderPager(items.slice(1).length);
+    $("count").textContent = items.length + (items.length === 1 ? " offer" : " offers") +
+      (state.stage !== "all" ? " for " + STAGE_LABEL[state.stage] : "") +
+      (state.cat !== "all" ? " in " + CAT_LABEL[state.cat] : "");
+    $("empty").hidden = items.length !== 0;
+    $("featured").hidden = items.length === 0;
+    $("table").hidden = items.length === 0;
+  }
+
+  $("q").addEventListener("input", e => { state.q = e.target.value; state.page = 1; render(); });
+  $("stage").addEventListener("change", e => { state.stage = e.target.value; state.page = 1; render(); });
+  $("pager").addEventListener("click", e => {
+    const b = e.target.closest("button");
+    if (!b || b.disabled) return;
+    if (b.dataset.page) state.page = Number(b.dataset.page);
+    else if (b.dataset.go === "prev") state.page--;
+    else state.page++;
+    render();
+    $("table").scrollIntoView({ block: "start" });
+  });
+  document.querySelectorAll(".filter").forEach(btn => btn.addEventListener("click", () => {
+    state.cat = btn.dataset.cat;
+    state.page = 1;
+    document.querySelectorAll(".filter").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+    render();
+  }));
+  $("reset").addEventListener("click", () => {
+    state.q = ""; state.cat = "all"; state.stage = "all"; state.page = 1; $("q").value = ""; $("stage").value = "all";
+    document.querySelectorAll(".filter").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.cat === "all")));
+    render();
+  });
+
+  render();
+</script>
+</body>
+</html>
