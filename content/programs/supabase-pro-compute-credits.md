@@ -14,6 +14,7 @@ benefit: "$10 per month in compute credits on Pro and Team, which Supabase says 
 elig: "Organizations on the Supabase Pro or Team plan"
 stages: ["pre", "seed", "a"]
 gate: "Requires a paid Pro or Team subscription"
+expired: false
 apply_url: "https://supabase.com/pricing"
 ---
 

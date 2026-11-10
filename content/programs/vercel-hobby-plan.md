@@ -14,6 +14,7 @@ benefit: "Free personal hosting, including 100 GB of Fast Data Transfer, 1 milli
 elig: "Individual users, for non-commercial personal use only"
 stages: ["pre"]
 gate: "Hobby is limited to personal, non-commercial use"
+expired: false
 apply_url: "https://vercel.com/docs/plans/hobby"
 ---
 

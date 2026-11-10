@@ -14,6 +14,7 @@ benefit: "Reserve a block of shared or performance Machine compute in a region a
 elig: "Any Fly.io organization that can buy reservation blocks in the billing dashboard"
 stages: ["pre", "seed", "a"]
 gate: "Paid upfront for one year; credits apply only to CPU and extra RAM in the chosen region"
+expired: false
 apply_url: "https://docs.fly.io/about/pricing"
 ---
 

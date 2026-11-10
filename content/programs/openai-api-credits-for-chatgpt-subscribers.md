@@ -14,6 +14,7 @@ benefit: "Up to $500 per month in API credits, based on your Pro plan or paid Bu
 elig: "Paid ChatGPT Pro or Business subscriptions that are at least seven days old; owners of both the ChatGPT plan and the API organization"
 stages: ["pre", "seed", "a"]
 gate: "Must link a paid ChatGPT Pro or Business subscription; free trials and complimentary plans do not qualify"
+expired: false
 apply_url: "https://developers.openai.com/api/docs/guides/chatgpt-api-credits"
 ---
 

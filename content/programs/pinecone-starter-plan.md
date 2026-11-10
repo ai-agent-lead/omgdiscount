@@ -14,6 +14,7 @@ benefit: "A $0 plan with up to 2 GB of storage, 2 million write units and 1 mill
 elig: "Anyone who signs up for Pinecone"
 stages: ["pre"]
 gate: ""
+expired: false
 apply_url: "https://www.pinecone.io/pricing/"
 ---
 

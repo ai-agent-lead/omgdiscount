@@ -14,6 +14,7 @@ benefit: "$100 per month on Max, $200 on Ultra, or up to $500 pooled on Team, fo
 elig: "Active Max, Ultra or Team plans in good standing; new subscribers can claim after 7 days"
 stages: ["pre", "seed", "a"]
 gate: "Must link the Claude plan to a Console organization; Free, Pro and Enterprise plans are not eligible"
+expired: false
 apply_url: "https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers"
 ---
 

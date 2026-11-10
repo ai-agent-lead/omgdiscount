@@ -14,6 +14,7 @@ benefit: "$5 per month in included AI Gateway credit on the free tier, with no m
 elig: "Every Vercel team, until the team purchases AI Gateway credits"
 stages: ["pre", "seed"]
 gate: "Free-tier models only; purchasing credits ends the monthly free credit"
+expired: false
 apply_url: "https://vercel.com/docs/ai-gateway/pricing"
 ---
 

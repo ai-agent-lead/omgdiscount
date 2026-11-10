@@ -14,6 +14,7 @@ benefit: "Up to 1 year of Convex Professional with no seat fees, and 30% off usa
 elig: "Series A or earlier, under 20 employees, under 3 years old, and less than $3M raised"
 stages: ["pre", "seed", "a"]
 gate: ""
+expired: false
 apply_url: "https://www.convex.dev/startups"
 ---
 

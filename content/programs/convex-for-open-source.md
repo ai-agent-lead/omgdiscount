@@ -14,6 +14,7 @@ benefit: "Free Convex Pro for one team, community support from the Convex team, 
 elig: "Actively maintained open source projects built with Convex or planning to integrate it"
 stages: ["pre", "seed", "a"]
 gate: ""
+expired: false
 apply_url: "https://www.convex.dev/open-source-program"
 ---
 

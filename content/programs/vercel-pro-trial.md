@@ -14,6 +14,7 @@ benefit: "$20 of Pro-trial credit, or 14 days of Pro features, whichever comes f
 elig: "Vercel user accounts that have not already used their one Pro trial"
 stages: ["pre", "seed"]
 gate: "One Pro trial per user account"
+expired: false
 apply_url: "https://vercel.com/docs/plans/pro-plan/trials"
 ---
 

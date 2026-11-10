@@ -14,6 +14,7 @@ benefit: "$500 for qualified startups; partner and top-VC tiers range from $2,50
 elig: "New customers, Series A or earlier, under $50M raised, with at least $25K in seed funding"
 stages: ["seed", "a"]
 gate: "Higher tiers need a Render partner or a top-tier VC in the network"
+expired: false
 apply_url: "https://render.com/startups"
 ---
 

@@ -14,6 +14,7 @@ benefit: "$300 in credits over 21 days, with Standard features including backups
 elig: "Organizations that are not already on Standard or Enterprise, and did not subscribe through a marketplace partner; one trial per organization"
 stages: ["pre", "seed"]
 gate: "One trial per organization; marketplace-origin accounts cannot start it"
+expired: false
 apply_url: "https://docs.pinecone.io/admin/billing/standard-trial"
 ---
 

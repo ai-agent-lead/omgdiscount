@@ -14,6 +14,7 @@ benefit: "$10,000 if bootstrapped under $1M raised; $100,000 or $350,000 with an
 elig: "For-profit tech startups founded in the last 10 years, funded up to Series B"
 stages: ["pre", "seed", "a"]
 gate: "The $100,000 and $350,000 tiers need funding from an affiliated partner"
+expired: false
 apply_url: "https://www.cloudflare.com/startups/"
 ---
 

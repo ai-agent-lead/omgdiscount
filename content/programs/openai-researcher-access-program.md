@@ -14,6 +14,7 @@ benefit: "Up to $1,000 in OpenAI API credits, valid for 12 months, for publicly 
 elig: "Researchers affiliated with an academic or research organization, or nonprofits doing research, in API-supported countries"
 stages: ["pre"]
 gate: "Quarterly review of a research proposal"
+expired: false
 apply_url: "https://openai.com/form/researcher-access-program/"
 ---
 

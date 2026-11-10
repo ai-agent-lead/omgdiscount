@@ -14,6 +14,7 @@ benefit: "Up to $15,000, $30,000 or $50,000 in platform credits, depending on fu
 elig: "Selection-based; tiers are based on how much the startup has raised"
 stages: ["pre", "seed", "a"]
 gate: "Selection-based application"
+expired: false
 apply_url: "https://www.together.ai/startup-accelerator"
 ---
 

@@ -14,6 +14,7 @@ benefit: "Monthly cash sponsorship for six months, plus optional credits of up t
 elig: "Public, actively maintained projects under an OSI-approved license, with GitHub Sponsors enabled"
 stages: ["pre", "seed", "a"]
 gate: ""
+expired: false
 apply_url: "https://neon.com/programs/open-source"
 ---
 

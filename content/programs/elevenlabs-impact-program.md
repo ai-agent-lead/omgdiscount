@@ -14,6 +14,7 @@ benefit: "Approved nonprofits receive 12 months of free Pro access and can reapp
 elig: "Registered nonprofits in good standing; healthcare, education and culture are prioritized"
 stages: ["pre", "seed", "a"]
 gate: "Nonprofit verification through Goodstack"
+expired: false
 apply_url: "https://elevenlabs.io/impact"
 ---
 

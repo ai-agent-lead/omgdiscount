@@ -14,6 +14,7 @@ benefit: "A one-time grant of free GPU credits, plus technical and GTM support"
 elig: "New Modal customers with VC funding from a partner, or over $1M raised"
 stages: ["seed", "a"]
 gate: "Needs VC funding; partner network or over $1M raised"
+expired: false
 apply_url: "https://modal.com/startups"
 ---
 

@@ -14,6 +14,7 @@ benefit: "Includes 1 million function calls, 20 GB-hours of action compute, 0.5 
 elig: "Anyone who starts a Convex team on the Free plan"
 stages: ["pre", "seed"]
 gate: ""
+expired: false
 apply_url: "https://www.convex.dev/pricing"
 ---
 

@@ -14,6 +14,7 @@ benefit: "Starter is $1 for the first month then $6; Creator is $11 then $22; an
 elig: "Anyone subscribing to a paid ElevenLabs plan on the pricing page"
 stages: ["pre", "seed"]
 gate: ""
+expired: false
 apply_url: "https://elevenlabs.io/pricing"
 ---
 

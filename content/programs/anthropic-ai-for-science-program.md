@@ -14,6 +14,7 @@ benefit: "Up to $20,000 in Claude API credits for a 6-month period, if approved"
 elig: "Researchers at academic or nonprofit research institutions, with a focus on biology and life sciences"
 stages: ["pre"]
 gate: "Monthly review of a scientific research proposal"
+expired: false
 apply_url: "https://support.claude.com/en/articles/11199177-anthropic-s-ai-for-science-program"
 ---
 

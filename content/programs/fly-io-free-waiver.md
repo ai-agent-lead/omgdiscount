@@ -14,6 +14,7 @@ benefit: "If your personal organization's monthly bill is under $5, you pay $0; 
 elig: "Your personal Fly.io organization, on Pay As You Go billing, with a credit card on file"
 stages: ["pre", "seed"]
 gate: "Credit card required; other organizations are not covered"
+expired: false
 apply_url: "https://docs.fly.io/about/free-waiver"
 ---
 

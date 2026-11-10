@@ -14,6 +14,7 @@ benefit: "Free Business-plan protections, including unmetered DDoS mitigation, W
 elig: "At-risk organizations in human rights, civil society, journalism or democracy, usually with a partner sponsor"
 stages: ["pre", "seed", "a"]
 gate: "Partner sponsorship, or a direct application that Cloudflare reviews"
+expired: false
 apply_url: "https://www.cloudflare.com/galileo/"
 ---
 

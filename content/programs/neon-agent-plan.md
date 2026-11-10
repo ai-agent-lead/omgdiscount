@@ -14,6 +14,7 @@ benefit: "Up to $25,000 in credits for paid-tier usage, and Neon-sponsored infra
 elig: "Platforms that provision Postgres for end users; requires a Scale plan and Neon approval"
 stages: ["pre", "seed", "a"]
 gate: "Must already be on the Neon Scale plan, with a card on file"
+expired: false
 apply_url: "https://neon.com/programs/agents"
 ---
 

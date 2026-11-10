@@ -14,6 +14,7 @@ benefit: "A $0 plan with unlimited API requests, 50,000 monthly active users, 50
 elig: "Anyone who signs up for Supabase"
 stages: ["pre"]
 gate: ""
+expired: false
 apply_url: "https://supabase.com/pricing"
 ---
 

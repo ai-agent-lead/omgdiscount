@@ -14,6 +14,7 @@ benefit: "$500 in Atlas credits, free certification, and access to educator curr
 elig: "Educators, faculty or researchers at accredited schools, or bootcamp instructors, with a verifiable school email or documents"
 stages: ["pre"]
 gate: "Educator verification (SheerID in some countries, or a manual review)"
+expired: false
 apply_url: "https://www.mongodb.com/academia"
 ---
 

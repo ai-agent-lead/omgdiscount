@@ -14,6 +14,7 @@ benefit: "Free web services, one Free Postgres database, one Free Key Value inst
 elig: "Any Render workspace; Free instances are for testing and hobby projects, not production"
 stages: ["pre"]
 gate: ""
+expired: false
 apply_url: "https://render.com/docs/free"
 ---
 

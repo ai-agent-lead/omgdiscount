@@ -14,6 +14,7 @@ benefit: "Self-funded: up to $1,000 in Neon credits. Venture-backed: up to $200,
 elig: "Self-funded under $1M, or VC-backed with at least $1M or a recognized accelerator"
 stages: ["pre", "seed", "a"]
 gate: "The $200,000 tier needs $1M raised or a recognized accelerator"
+expired: false
 apply_url: "https://neon.com/startups"
 ---
 

@@ -14,6 +14,7 @@ benefit: "New accounts get $1 of credit for Machines, Sprites and Managed Postgr
 elig: "New Fly.io accounts; the credit applies to the personal organization created at signup"
 stages: ["pre"]
 gate: ""
+expired: false
 apply_url: "https://docs.fly.io/about/free-trial"
 ---
 

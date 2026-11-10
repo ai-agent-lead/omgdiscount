@@ -14,6 +14,7 @@ benefit: "Up to $30,000 in credit toward Vercel usage, per Vercel's startup page
 elig: "Startups with a Vercel Startup Partner; the amount depends on the partner arrangement"
 stages: ["pre", "seed"]
 gate: "Needs a Vercel Startup Partner"
+expired: false
 apply_url: "https://vercel.com/startups"
 ---
 

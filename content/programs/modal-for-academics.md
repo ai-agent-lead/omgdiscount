@@ -14,6 +14,7 @@ benefit: "Up to $10,000 in free compute credits, per Modal's pricing page"
 elig: "Graduate students, labs and researchers"
 stages: ["pre"]
 gate: "Application-based academic grant"
+expired: false
 apply_url: "https://modal.com/academics"
 ---
 

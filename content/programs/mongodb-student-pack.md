@@ -14,6 +14,7 @@ benefit: "$50 in Atlas credits and a free certification, which MongoDB describes
 elig: "Students in the GitHub Student Developer Pack, enrolled in a degree or diploma program"
 stages: ["pre"]
 gate: "GitHub Student Developer Pack membership"
+expired: false
 apply_url: "https://www.mongodb.com/students"
 ---
 

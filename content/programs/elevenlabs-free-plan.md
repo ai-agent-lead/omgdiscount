@@ -14,6 +14,7 @@ benefit: "10,000 credits each month at $0, for text to speech, speech to text, s
 elig: "Anyone who signs up for an ElevenLabs account"
 stages: ["pre"]
 gate: ""
+expired: false
 apply_url: "https://elevenlabs.io/pricing"
 ---
 

@@ -14,6 +14,7 @@ benefit: "The Creator plan free for 3 months, and one year of ElevenReader Ultra
 elig: "University students aged 18 or over who can verify student status; ElevenReader also needs a .edu or equivalent email"
 stages: ["pre"]
 gate: "Student verification"
+expired: false
 apply_url: "https://elevenlabs.io/students"
 ---
 

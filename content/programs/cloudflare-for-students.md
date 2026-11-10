@@ -14,6 +14,7 @@ benefit: "The $5 per month Workers Paid base fee is waived for 12 months, with t
 elig: "US students 18 or over with a verified .edu billing email"
 stages: ["pre"]
 gate: "US .edu billing email, and a payment method on file"
+expired: false
 apply_url: "https://www.cloudflare.com/students/"
 ---
 

@@ -14,6 +14,7 @@ benefit: "Up to $15,000 in Fly.io usage credits, plus a shared Slack channel wit
 elig: "Seed or Series A startups backed by a venture firm or accelerator"
 stages: ["seed", "a"]
 gate: "Needs VC or accelerator backing"
+expired: false
 apply_url: "https://fly.io/startups"
 ---
 

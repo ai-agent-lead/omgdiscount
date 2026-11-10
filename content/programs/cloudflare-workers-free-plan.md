@@ -14,6 +14,7 @@ benefit: "Workers Free includes 100,000 requests per day, 10 ms of CPU time per 
 elig: "Anyone with a Cloudflare account; the Free plan is the default"
 stages: ["pre", "seed"]
 gate: ""
+expired: false
 apply_url: "https://developers.cloudflare.com/workers/platform/pricing/"
 ---
 

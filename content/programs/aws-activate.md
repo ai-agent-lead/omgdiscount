@@ -14,6 +14,7 @@ benefit: "Founders tier: $1,000 in credits. Portfolio tier: up to $200,000 for p
 elig: "Founders: self-funded startups. Portfolio: backed by an Activate Provider"
 stages: ["pre", "seed"]
 gate: "Portfolio needs an Activate Provider"
+expired: false
 apply_url: "https://aws.amazon.com/startups/"
 ---
 

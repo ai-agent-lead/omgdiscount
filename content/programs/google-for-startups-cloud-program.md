@@ -14,6 +14,7 @@ benefit: "Up to $100,000 in Google Cloud credits in year 1 on the Scale tier"
 elig: "Startups with a Pre-Seed or Seed round in the last 5 years, or a Series A in the last 12 months"
 stages: ["seed", "a"]
 gate: "Needs VC funding or accelerator referral"
+expired: false
 apply_url: "https://cloud.google.com/startup"
 ---
 

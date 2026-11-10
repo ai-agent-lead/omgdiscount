@@ -14,6 +14,7 @@ benefit: "Free Postgres with up to 100 projects, 100 CU-hours and 5 GB network t
 elig: "Anyone who signs up; no credit card required"
 stages: ["pre", "seed"]
 gate: ""
+expired: false
 apply_url: "https://neon.com/pricing"
 ---
 

@@ -14,6 +14,7 @@ benefit: "$30 of included compute each month, with no Starter plan fee, for GPUs
 elig: "Anyone on the Modal Starter plan, which is the default for small teams"
 stages: ["pre", "seed"]
 gate: ""
+expired: false
 apply_url: "https://modal.com/pricing"
 ---
 

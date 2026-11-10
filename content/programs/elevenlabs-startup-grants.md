@@ -14,6 +14,7 @@ benefit: "12 months of platform access and 33 million characters, valued by Elev
 elig: "Startups with fewer than 25 employees, a monetization plan and a valid business email"
 stages: ["pre", "seed", "a"]
 gate: ""
+expired: false
 apply_url: "https://elevenlabs.io/startup-grants"
 ---
 

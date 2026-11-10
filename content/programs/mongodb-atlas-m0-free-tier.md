@@ -14,6 +14,7 @@ benefit: "An M0 Atlas cluster at $0, with 512 MB of storage, shared RAM and vCPU
 elig: "Anyone who creates a MongoDB Atlas account"
 stages: ["pre"]
 gate: ""
+expired: false
 apply_url: "https://www.mongodb.com/cloud/atlas/pricing"
 ---
 

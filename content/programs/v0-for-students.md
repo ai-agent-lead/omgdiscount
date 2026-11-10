@@ -14,6 +14,7 @@ benefit: "Verified students at active schools get $20 in v0 credits per month, f
 elig: "Currently enrolled students at a v0 active school, with a valid student email"
 stages: ["pre"]
 gate: "Must attend a listed active school and verify with a student email"
+expired: false
 apply_url: "https://v0.app/students"
 ---
 

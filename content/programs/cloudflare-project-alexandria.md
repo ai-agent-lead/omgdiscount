@@ -14,6 +14,7 @@ benefit: "Annual credits that can cover plan upgrades, Workers and Pages request
 elig: "Nonprofit open source projects with a recognized OSS license"
 stages: ["pre", "seed", "a"]
 gate: "Must operate on a non-profit basis"
+expired: false
 apply_url: "https://www.cloudflare.com/lp/project-alexandria/"
 ---
 

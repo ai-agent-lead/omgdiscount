@@ -14,6 +14,7 @@ benefit: "Team plan listed at $8 per user per month, or $3 per user per month fo
 elig: "Registered 501(c)(3) organizations and international equivalents, K-12 schools, and certain mission-based healthcare providers"
 stages: ["pre", "seed", "a"]
 gate: "Goodstack verification for Team, or sales verification for Enterprise"
+expired: false
 apply_url: "https://claude.com/solutions/nonprofits"
 ---
 

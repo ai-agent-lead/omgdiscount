@@ -14,6 +14,7 @@ benefit: "Free membership, with technical tools, training and access to NVIDIA's
 elig: "AI startups; NVIDIA says there is no fee, deadline or equity requirement"
 stages: ["pre", "seed", "a"]
 gate: ""
+expired: false
 apply_url: "https://www.nvidia.com/en-us/startups/"
 ---
 
