@@ -234,9 +234,18 @@
   }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
   .apply.off { opacity: .45; pointer-events: none; box-shadow: none; }
+  .expired-toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); min-height: 40px; cursor: pointer; }
+  .expired-toggle[hidden] { display: none; }
 </style>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="any">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2LSVD5ZTCM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag("js", new Date());
+  gtag("config", "G-2LSVD5ZTCM");
+</script>
 {{META}}
 </head>
 <body>
@@ -273,6 +282,13 @@
         <option value="seed">Seed</option>
         <option value="a">Series A+</option>
       </select>
+      <label class="expired-toggle" id="expired-wrap" hidden><input type="checkbox" id="show-expired"> Show expired <span id="n-expired"></span></label>
+      <select class="stage" id="sort" aria-label="Sort by">
+        <option value="updated">Latest update</option>
+        <option value="value-desc">Highest value</option>
+        <option value="value-asc">Lowest value</option>
+        <option value="name">Name A–Z</option>
+      </select>
       <div class="search">
         <input id="q" type="search" aria-label="Search offers" placeholder="Search" autocomplete="off">
       </div>
@@ -302,7 +318,13 @@
   const STAGE_LABEL = { pre: "Pre-seed", seed: "Seed", a: "Series A+" };
   const money = (n) => "$" + n.toLocaleString("en-US");
   const PAGE_SIZE = 10;
-  const state = { q: "", cat: "all", stage: "all", page: 1 };
+  const state = { q: "", cat: "all", stage: "all", sort: "updated", showExpired: false, page: 1 };
+  const SORTS = {
+    updated: (a, b) => b.updated.localeCompare(a.updated) || a.name.localeCompare(b.name),
+    "value-desc": (a, b) => b.value - a.value,
+    "value-asc": (a, b) => a.value - b.value,
+    name: (a, b) => a.name.localeCompare(b.name),
+  };
   const $ = (id) => document.getElementById(id);
 
   // Category counts describe the whole list, not the current search.
@@ -315,8 +337,9 @@
     return OFFERS
       .filter(o => (state.cat === "all" || o.cat === state.cat) &&
         (state.stage === "all" || o.stages.includes(state.stage)) &&
+        (state.showExpired || !o.expired) &&
         (!q || [o.name, o.benefit, o.elig, o.unit, CAT_LABEL[o.cat]].join(" ").toLowerCase().includes(q)))
-      .sort((a, b) => b.value - a.value);
+      .sort(SORTS[state.sort]);
   }
 
   let raf = 0, first = true;
@@ -351,7 +374,7 @@
       ${o.gate ? `<span class="tag gate">${o.gate}</span>` : ""}`;
   }
   const logoHTML = (o) => `<span class="logo"><img src="logos/${o.logo}.svg" alt="" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'"><span class="logo-text">${o.short}</span></span>`;
-  const valueHTML = (o) => `<p class="amount-value">${o.value === 0 ? "Waived" : money(o.value)}</p><p class="amount-unit">${o.unit}</p>`;
+  const valueHTML = (o) => `${o.value === 0 ? "" : `<p class="amount-value">${money(o.value)}</p>`}<p class="amount-unit">${o.unit}</p>`;
 
   function renderFeature(o) {
     if (!o) { $("featured").innerHTML = ""; return; }
@@ -461,6 +484,8 @@
 
   $("q").addEventListener("input", e => { state.q = e.target.value; state.page = 1; render(); });
   $("stage").addEventListener("change", e => { state.stage = e.target.value; state.page = 1; render(); });
+  $("sort").addEventListener("change", e => { state.sort = e.target.value; state.page = 1; render(); });
+  $("show-expired").addEventListener("change", e => { state.showExpired = e.target.checked; state.page = 1; render(); });
   $("pager").addEventListener("click", e => {
     const b = e.target.closest("button");
     if (!b || b.disabled) return;
@@ -477,10 +502,13 @@
     render();
   }));
   $("reset").addEventListener("click", () => {
-    state.q = ""; state.cat = "all"; state.stage = "all"; state.page = 1; $("q").value = ""; $("stage").value = "all";
+    state.q = ""; state.cat = "all"; state.stage = "all"; state.sort = "updated"; state.page = 1; $("q").value = ""; $("stage").value = "all"; $("sort").value = "updated"; state.showExpired = false; $("show-expired").checked = false;
     document.querySelectorAll(".filter").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.cat === "all")));
     render();
   });
+
+  const expiredCount = OFFERS.filter(o => o.expired).length;
+  if (expiredCount) { $("expired-wrap").hidden = false; $("n-expired").textContent = `(${expiredCount})`; }
 
   render();
 </script>

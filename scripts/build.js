@@ -168,6 +168,7 @@ function loadPrograms() {
       `non-empty list from ${Object.keys(STAGES).join(", ")}`
     );
     need("gate", (v) => v === "" || typeof v === "string", "string (empty if none)");
+    if (meta.expired !== undefined && typeof meta.expired !== "boolean") fail(file, "expired must be true or false");
     need("logo", (v) => v === "" || typeof v === "string", "string logo file name without .svg (empty if none)");
     need("apply_url", (v) => v === "" || /^https:\/\//.test(v), "https URL to the provider's page (empty if none)");
     need("timestamp", (v) => typeof v === "string" && /^\d{4}-\d{2}-\d{2}/.test(v), "ISO date, e.g. 2026-11-10");
@@ -218,6 +219,8 @@ function dataJs(programs) {
     stages: p.meta.stages,
     gate: p.meta.gate,
     apply_url: p.meta.apply_url,
+    updated: p.meta.timestamp,
+    expired: p.meta.expired === true,
   }));
   const info = {};
   programs.forEach((p) => {
@@ -237,6 +240,7 @@ function programMain(p) {
         <span class="tag">${esc(CATEGORIES[m.category])}</span>
         ${m.ai ? `<span class="tag ai">Uses AI</span>` : ""}
         ${m.gate ? `<span class="tag gate">${esc(m.gate)}</span>` : ""}
+        ${m.expired ? `<span class="tag gate">Expired</span>` : ""}
       </div>
       ${logo}
       <h1>${esc(m.title)}</h1>
@@ -381,11 +385,11 @@ function pageMain(pg) {
 }
 
 function categoryMain(key, programs) {
-  const list = programs.filter((p) => p.meta.category === key);
+  const list = programs.filter((p) => p.meta.category === key && !p.meta.expired);
   const items = list
     .map((p) => {
-      const amount = p.meta.value === 0 ? "Waived" : money(p.meta.value);
-      return `<li><a href="../programs/${esc(p.id)}.html"><b>${esc(p.meta.title)}</b><span>${esc(amount)} · ${esc(p.meta.unit)}</span></a></li>`;
+      const amount = p.meta.value === 0 ? "" : money(p.meta.value) + " · ";
+      return `<li><a href="../programs/${esc(p.id)}.html"><b>${esc(p.meta.title)}</b><span>${esc(amount)}${esc(p.meta.unit)}</span></a></li>`;
     })
     .join("\n          ");
   return `<h1>${esc(CATEGORIES[key])}</h1>
