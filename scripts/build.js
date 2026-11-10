@@ -388,7 +388,7 @@ function categoryMain(key, programs) {
     })
     .join("\n          ");
   return `<h1>${esc(CATEGORIES[key])}</h1>
-      <p class="lede">${esc(CAT_DESC[key])} ${list.length} ${list.length === 1 ? "program" : "programs"}.</p>
+      <p class="lede">${esc(CAT_DESC[key])} ${list.length ? `${list.length} ${list.length === 1 ? "program" : "programs"}.` : "No programs listed yet."}</p>
       <section class="related" style="margin-top:48px">
         <ul class="rel-list">
           ${items}

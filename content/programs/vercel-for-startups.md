@@ -10,8 +10,8 @@ category: "dev"
 value: 30000
 unit: "USD Vercel credits, up to one year"
 ai: false
-benefit: "Up to $30,000 in credit toward Vercel usage (amount depends on the Startup Partner)"
-elig: "Startups affiliated with an approved Vercel Startup Partner; later-stage companies are outside the program"
+benefit: "Up to $30,000 in credit toward Vercel usage, per Vercel's startup page"
+elig: "Startups with a Vercel Startup Partner; the amount depends on the partner arrangement"
 stages: ["pre", "seed"]
 gate: "Needs a Vercel Startup Partner"
 apply_url: "https://vercel.com/startups"
@@ -27,15 +27,12 @@ Deploying a Next.js or web frontend with preview links for every change.
 
 ## Who qualifies
 
-You need an affiliation with an approved Vercel Startup Partner and must upload proof of it.
+The amount depends on the arrangement with your Startup Partner, up to $30,000 for startups accepted on or after 6 August 2026.
 
-For startups accepted on or after 6 August 2026 the amount depends on the partner arrangement, up to $30,000. Earlier acceptances follow the legacy 12-month grant in their acceptance email.
-
-Vercel can revoke credits at any time, including for abuse.
+Check vercel.com/startups/credits for the current terms.
 
 ## How to apply
 
-1. Find an approved Vercel Startup Partner and request their referral.
+1. Find an approved Vercel Startup Partner.
 2. Apply at vercel.com/startups/credits with your company details.
-3. Upload proof of the partner affiliation when asked.
-4. Apply the credit to your Vercel team under billing.
+3. Apply the credit to your Vercel team under billing.

@@ -10,8 +10,8 @@ category: "cloud"
 value: 100000
 unit: "USD credits, year 1 (Scale tier)"
 ai: true
-benefit: "Up to $100,000 in Google Cloud credits in year 1, plus up to $100,000 in year 2 (AI tier: up to $250,000 in year 1)"
-elig: "Startups with a Pre-Seed/Seed round in the last 5 years, or a Series A in the last 12 months (Scale tier)"
+benefit: "Up to $100,000 in Google Cloud credits in year 1 on the Scale tier"
+elig: "Startups with a Pre-Seed or Seed round in the last 5 years, or a Series A in the last 12 months"
 stages: ["seed", "a"]
 gate: "Needs VC funding or accelerator referral"
 apply_url: "https://cloud.google.com/startup"
@@ -27,15 +27,12 @@ Hosting model training and inference, data pipelines, APIs.
 
 ## Who qualifies
 
-The Scale tier is for VC-backed startups: a Pre-Seed or Seed round in the last 5 years, or a Series A in the last 12 months, founded within the last 5 years.
+The Scale tier is for VC-backed startups that raised a Pre-Seed or Seed round in the last 5 years, or a Series A in the last 12 months.
 
-A Start tier exists for digital-native startups with a working MVP that have not yet raised venture funding. The AI tier is for AI-first startups founded within the last 10 years that have not received more than $5,000 in Google Cloud credits.
-
-Acceptance is at Google's discretion, and criteria change between years.
+Google decides acceptance. Check cloud.google.com/startup for the current tiers before you apply.
 
 ## How to apply
 
-1. Check which tier matches your funding and product stage on cloud.google.com/startup.
-2. Apply, or get a referral from an eligible VC or accelerator partner.
-3. Submit company details, funding history and your intended workload.
-4. After approval, the credits attach to a Cloud billing account you link to your projects.
+1. Check the tier that matches your funding stage on cloud.google.com/startup.
+2. Apply, or get a referral from an eligible VC or accelerator.
+3. After approval, the credits attach to a Cloud billing account you link to your projects.
