@@ -10,7 +10,7 @@ category: "cloud"
 tags: ["cloud","ai","hosting","startup-credits","referral"]
 value: 200000
 unit: "USD credits, Portfolio tier (ceiling)"
-ai: false
+ai: true
 benefit: "Founders tier: start with $1,000, and select participants may qualify for up to $5,000. Portfolio tier: up to $200,000 for startups backed by an Activate Provider"
 elig: "Pre-Series B startups founded in the last 10 years with an AWS account on the Paid Tier plan; Portfolio needs an Activate Provider"
 stages: ["pre", "seed"]

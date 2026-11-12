@@ -10,7 +10,7 @@ category: "cloud"
 tags: ["cloud","ai","hosting","startup-credits","no-funding-needed"]
 value: 150000
 unit: "USD Azure credits"
-ai: false
+ai: true
 benefit: "Up to $150,000 in Azure Startup credits over time: start building with initial credits and unlock up to $5,000 through business verification, with more as you adopt Azure services"
 elig: "Privately held software startups; no funding required"
 stages: ["pre", "seed"]
