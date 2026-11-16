@@ -2,7 +2,7 @@
 type: program
 title: "GitHub Student Developer Pack"
 description: "A free bundle of developer tools and partner offers for verified students."
-timestamp: 2026-11-10
+timestamp: 2026-11-17
 order: 57
 short: "GitHub"
 logo: ""
@@ -25,7 +25,7 @@ The GitHub Student Developer Pack is GitHub Education's bundle of tools and offe
 
 ## What you can use it for
 
-Learning and building projects with a code editor, cloud, database and monitoring stack at no cost. Examples listed on the pack page include GitHub Copilot Student (unlimited code completions and an allowance of GitHub AI Credits, with limited chat and agent usage), GitHub Codespaces at Pro level, a free annual JetBrains subscription, $13 USD per month of Heroku credit for 24 months, $50 in MongoDB Atlas credits, Datadog Pro with 10 servers for 2 years, $25 in Stripe credits and 1Password free for 2 years.
+Learning and building projects with a code editor, cloud, database and monitoring stack at no cost. Examples listed on the pack page include GitHub Copilot Student (unlimited code completions and an allowance of GitHub AI Credits, with limited chat and agent usage), GitHub Codespaces at Pro level, a free annual JetBrains subscription, $13 USD per month of Heroku credit for 24 months, $50 in MongoDB Atlas credits, Datadog Pro with 10 servers for 2 years, waived Stripe transaction fees on the first $1,000 in revenue processed and 1Password free for 2 years. The pack page itself shows no amount for Stripe; the waiver comes from GitHub Education's current partners FAQ.
 
 ## Who qualifies
 
