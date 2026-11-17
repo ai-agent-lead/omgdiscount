@@ -2,7 +2,7 @@
 type: program
 title: "Sentry for Startups"
 description: "Up to $5,000 in Sentry credits for 12 months, plus priority support, for young startups that have raised under $5M."
-timestamp: 2026-11-12
+timestamp: 2026-11-18
 order: 62
 short: "Sentry"
 logo: ""

@@ -2,7 +2,7 @@
 type: program
 title: "Vercel for Startups"
 description: "A hosting platform for web apps and frontends, with serverless functions."
-timestamp: 2026-11-10
+timestamp: 2026-11-18
 order: 6
 short: "Vercel"
 logo: "vercel"

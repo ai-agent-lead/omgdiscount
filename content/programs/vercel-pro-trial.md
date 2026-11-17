@@ -2,7 +2,7 @@
 type: program
 title: "Vercel Pro Trial"
 description: "A 14-day Vercel Pro trial with $20 in credit, limited to one trial per user account."
-timestamp: 2026-11-10
+timestamp: 2026-11-18
 order: 42
 short: "Vercel"
 logo: "vercel"
