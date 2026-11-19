@@ -2,7 +2,7 @@
 type: program
 title: "Vercel Open Source Program"
 description: "Vercel platform credits and support for open source projects. Applications are currently closed."
-timestamp: 2026-11-10
+timestamp: 2026-11-18
 order: 53
 short: "Vercel"
 logo: "vercel"

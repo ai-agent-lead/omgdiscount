@@ -2,7 +2,7 @@
 type: program
 title: "Modal for Academics"
 description: "Free Modal compute credits for graduate students, labs and researchers."
-timestamp: 2026-11-10
+timestamp: 2026-11-18
 order: 23
 short: "Modal"
 logo: "modal"
