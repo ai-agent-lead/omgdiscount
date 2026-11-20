@@ -2,7 +2,7 @@
 type: program
 title: "Linear for Startups"
 description: "Free access to Linear's Business plan for startups affiliated with a Linear partner."
-timestamp: 2026-11-10
+timestamp: 2026-11-20
 order: 59
 short: "Linear"
 logo: ""

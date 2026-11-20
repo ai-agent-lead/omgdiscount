@@ -2,7 +2,7 @@
 type: program
 title: "Together AI Startup Accelerator"
 description: "Together AI: training, fine-tuning and inference on an AI cloud, with a selection-based credit program."
-timestamp: 2026-11-10
+timestamp: 2026-11-20
 order: 14
 short: "Together AI"
 logo: ""

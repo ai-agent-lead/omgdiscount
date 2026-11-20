@@ -2,7 +2,7 @@
 type: program
 title: "Render Free Instances"
 description: "Free Render web services, Postgres, Key Value and static sites, with monthly and idle limits."
-timestamp: 2026-11-10
+timestamp: 2026-11-20
 order: 39
 short: "Render"
 logo: "render"

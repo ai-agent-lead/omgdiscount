@@ -2,7 +2,7 @@
 type: program
 title: "PostHog for Startups"
 description: "$50,000 in PostHog credits for 12 months for young startups, plus partner perks."
-timestamp: 2026-11-10
+timestamp: 2026-11-20
 order: 56
 short: "PostHog"
 logo: ""
