@@ -2,7 +2,7 @@
 type: program
 title: "Pinecone Standard Plan Trial"
 description: "A 21-day Pinecone Standard trial with $300 in credits and no up-front payment."
-timestamp: 2026-11-10
+timestamp: 2026-11-20
 order: 50
 short: "Pinecone"
 logo: ""

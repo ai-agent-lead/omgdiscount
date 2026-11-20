@@ -2,7 +2,7 @@
 type: program
 title: "Clerk for Startups"
 description: "Discounted Clerk Pro for early-stage startups, on top of Clerk's free monthly user allowance."
-timestamp: 2026-11-10
+timestamp: 2026-11-20
 order: 60
 short: "Clerk"
 logo: ""
