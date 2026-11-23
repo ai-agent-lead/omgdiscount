@@ -2,7 +2,7 @@
 type: program
 title: "ElevenLabs Free Plan"
 description: "The ElevenLabs Free plan includes 10,000 credits each month, with no plan fee."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 35
 short: "ElevenLabs"
 logo: "elevenlabs"

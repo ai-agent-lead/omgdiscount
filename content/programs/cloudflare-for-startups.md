@@ -2,7 +2,7 @@
 type: program
 title: "Cloudflare for Startups"
 description: "Cloudflare's developer platform and global network, with credits for usage-based services."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 11
 short: "Cloudflare"
 logo: "cloudflare"

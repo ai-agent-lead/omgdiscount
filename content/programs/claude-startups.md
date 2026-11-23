@@ -2,7 +2,7 @@
 type: program
 title: "Claude Startups"
 description: "Anthropic's program for early-stage founders, with partner offers worth up to $45,000. The current cohort is full."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 51
 short: "Anthropic"
 logo: "anthropic"
@@ -21,7 +21,7 @@ apply_url: "https://claude.com/programs/startups"
 
 ## What it is
 
-Claude Startups is Anthropic's program for early-stage founders building on Claude. Members get partner offers, Applied AI sessions and events. As of 10 November 2026, the official page says the current cohort is full and Anthropic is not accepting new applications.
+Claude Startups is Anthropic's program for early-stage founders building on Claude. Members get partner offers, Applied AI sessions and events. As of 23 November 2026, the official page says the current cohort is full and Anthropic is not accepting new applications.
 
 ## What you can use it for
 

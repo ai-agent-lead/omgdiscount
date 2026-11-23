@@ -2,7 +2,7 @@
 type: program
 title: "Microsoft for Startups Founders Hub"
 description: "Azure cloud with access to hosted AI models through Azure AI."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 2
 short: "Microsoft Azure"
 logo: "microsoft-azure"

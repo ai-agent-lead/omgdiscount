@@ -2,7 +2,7 @@
 type: program
 title: "AWS Activate"
 description: "Amazon Web Services: servers, serverless functions, storage and Bedrock for models."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 3
 short: "AWS"
 logo: "aws"

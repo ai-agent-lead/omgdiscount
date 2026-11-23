@@ -2,7 +2,7 @@
 type: program
 title: "ElevenLabs Impact Program"
 description: "Twelve months of free ElevenLabs Pro access for registered nonprofits, plus related access for accessibility and education."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 19
 short: "ElevenLabs"
 logo: "elevenlabs"

@@ -2,7 +2,7 @@
 type: program
 title: "ElevenLabs Startup Grants"
 description: "Twelve months of ElevenLabs voice AI access, including conversational agents, speech and more."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 10
 short: "ElevenLabs"
 logo: "elevenlabs"

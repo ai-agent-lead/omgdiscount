@@ -1,8 +1,8 @@
 ---
 type: program
 title: "Fly.io Free Waiver"
-description: "Fly.io waives monthly bills under $5 on your personal organization, once a card is on file."
-timestamp: 2026-11-10
+description: "Fly.io waived monthly bills under $5 on personal organizations. New organizations now get the Free plan instead."
+timestamp: 2026-11-23
 order: 32
 short: "Fly.io"
 logo: "fly-io"
@@ -12,16 +12,16 @@ value: 5
 unit: "USD monthly waiver on personal organizations (bills under $5)"
 ai: false
 benefit: "If your personal organization's monthly bill is under $5, you pay $0; a bill of $5 or more is charged in full"
-elig: "Your personal Fly.io organization, on Pay As You Go billing, with a credit card on file"
+elig: "Existing personal Fly.io organizations on Pay As You Go billing with a credit card on file; not offered to new organizations"
 stages: ["pre", "seed"]
-gate: "Credit card required; other organizations are not covered"
-expired: false
+gate: "Existing personal organizations only; new organizations start on the Free plan instead"
+expired: true
 apply_url: "https://docs.fly.io/about/free-waiver"
 ---
 
 ## What it is
 
-Fly.io does not have a free tier. Instead, after you add a credit card, it waives any monthly bill under $5 on your personal organization.
+If a personal Fly.io organization's monthly bill comes to less than $5, Fly.io waives it. According to the official docs, the waiver is for existing organizations only. New organizations start on the Free plan, which gives $5 of usage every month, and Free plan organizations do not get the waiver.
 
 ## What you can use it for
 
@@ -29,14 +29,12 @@ Keeping a small personal app running without a bill, as long as Machines, Sprite
 
 ## Who qualifies
 
-The waiver applies only to the personal organization created when you sign up, and only once that organization is on Pay As You Go billing with a card on file. You do not need to sign up separately. Other organizations you create or join are billed in full.
+The waiver applies to an existing personal organization, the one created at signup, once it is on Pay As You Go billing with a card on file. Other organizations you create or join are billed in full. Fly.io says existing organizations keep the waiver until they move to the new plans, and that it will tell them before that happens.
 
-The first $5 is not taken off larger bills. A $4.20 bill is waived; a $7.00 bill is charged in full. The waiver starts after you add a card; before that, you can only use the $1 trial credit.
-
-Check docs.fly.io/about/free-waiver for the current terms.
+The first $5 is not taken off larger bills. A $4.20 bill is waived; a $7.00 bill is charged in full. New users should use the Fly.io Free plan instead. Check docs.fly.io/about/free-waiver for the current terms.
 
 ## How to apply
 
-1. Sign up for Fly.io and add a credit card on your personal organization.
-2. Use the organization as usual. There is no separate application.
-3. If the month's bill is under $5, it is waived automatically. Track usage in the dashboard so a bill of $5 or more is not a surprise.
+1. New organizations cannot get this waiver; follow the Fly.io Free Plan post instead.
+2. If you already have an eligible personal organization, there is no separate application.
+3. If the month's bill is under $5, it is waived automatically.

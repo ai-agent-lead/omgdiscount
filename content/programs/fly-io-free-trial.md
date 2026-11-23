@@ -2,16 +2,16 @@
 type: program
 title: "Fly.io Free Trial"
 description: "A $1 signup credit for new Fly.io accounts, with no credit card required."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 31
 short: "Fly.io"
 logo: "fly-io"
 category: "cloud"
 tags: ["cloud","hosting","trial"]
 value: 1
-unit: "USD trial credit, 7 days"
+unit: "USD one-time credit, 7 days"
 ai: false
-benefit: "New accounts get $1 of credit for Machines, Sprites and Managed Postgres, lasting 7 days or until it is used up"
+benefit: "New accounts get $1 of credit with no credit card, lasting 7 days or until it is used up"
 elig: "New Fly.io accounts; the credit applies to the personal organization created at signup"
 stages: ["pre"]
 gate: ""
@@ -21,22 +21,20 @@ apply_url: "https://docs.fly.io/about/free-trial"
 
 ## What it is
 
-Fly.io's current free trial is a $1 credit for new accounts. You do not need a credit card to start. Official pricing and docs pages all state $1, not a larger trial amount.
+Fly.io's current signup offer is a one-time $1 credit on the Free plan, with no credit card required. The credit expires after 7 days. The official docs page at docs.fly.io/about/free-trial is now titled "Fly.io Free Plan".
 
 ## What you can use it for
 
-The credit applies to Machines, Sprites and Managed Postgres on your personal organization. It lasts for 7 days or until you use it up, whichever comes first. A Managed Postgres cluster uses the $1 credit quickly.
+The $1 credit covers Machines, volumes and volume snapshots, data transfer, Sprites and one Managed Postgres cluster on the $4 Developer plan. Any remaining $1 credit is used first, before the monthly $5 that comes with a card.
 
 ## Who qualifies
 
-Every new account gets the credit on the personal organization created at signup. Until you add a card, trial limits apply: up to 10 Machines at a time, Machine size up to shared-cpu-2x with 4GB of memory, up to 20GB of volumes, and up to 3 Sprites. Trial Machines stop automatically after 5 minutes. Performance vCPUs, dedicated IPv4 addresses and extensions such as Tigris and Upstash are not available during the trial.
+Every new Fly.io account starts on the Free plan, on the personal organization created at signup. Free plan limits apply with or without a card: 1 member, up to 3 Machines with no performance Machines, volumes up to 5GB each, up to 3 Sprites, one Managed Postgres Developer cluster, and community support. Extensions such as Tigris, Supabase and Upstash Redis, and dedicated IPv4 addresses, are not available on the Free plan.
 
-When the credit runs out or expires, Machines stay stopped until you add a card. Fly.io may then delete trial Machines, volumes and Sprites, but it keeps your apps.
-
-Check docs.fly.io/about/free-trial for the current terms.
+When the $1 is used up, or after 7 days, you cannot create new resources until you add a card. Check docs.fly.io/about/free-trial for the current terms.
 
 ## How to apply
 
-1. Sign up at fly.io/app/sign-up. No credit card is required for the trial.
-2. Deploy to the personal organization created at signup and watch the remaining balance on the Billing page.
-3. Add a payment method before the credit runs out if you want to keep resources running. After you add a card, monthly bills under $5 on that personal organization may be waived.
+1. Sign up at fly.io/app/sign-up. No credit card is required for the $1 credit.
+2. Deploy within the Free plan limits and watch your balance on the Billing page.
+3. Add a card to receive $5 of usage every month; see the Fly.io Free Plan post.
