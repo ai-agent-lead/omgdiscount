@@ -2,7 +2,7 @@
 type: program
 title: "GitLab for Startups"
 description: "Free GitLab Ultimate for a year for up to 20 users at funded seed-stage startups, with discounts for later-stage startups."
-timestamp: 2026-11-12
+timestamp: 2026-11-24
 order: 65
 short: "GitLab"
 logo: ""

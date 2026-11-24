@@ -2,7 +2,7 @@
 type: program
 title: "Railway Free Trial"
 description: "A 30-day Railway trial with a one-time $5 grant, then a Free plan with $1 of credit per month."
-timestamp: 2026-11-16
+timestamp: 2026-11-24
 order: 70
 short: "Railway"
 logo: ""

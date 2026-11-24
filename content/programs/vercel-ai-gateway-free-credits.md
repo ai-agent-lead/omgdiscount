@@ -2,7 +2,7 @@
 type: program
 title: "Vercel AI Gateway Free Credits"
 description: "A monthly $5 AI Gateway credit for Vercel teams, on a subset of models, until you buy credits."
-timestamp: 2026-11-10
+timestamp: 2026-11-24
 order: 43
 short: "Vercel"
 logo: "vercel"

@@ -2,7 +2,7 @@
 type: program
 title: "Kiro Startup Credits"
 description: "Up to a year of Kiro Pro+ credits for early-stage to Series A startups, in three team-size tiers."
-timestamp: 2026-11-13
+timestamp: 2026-11-24
 order: 67
 short: "Kiro"
 logo: ""

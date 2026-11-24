@@ -2,7 +2,7 @@
 type: program
 title: "Temporal Cloud for Startups"
 description: "$6,000 in Temporal Cloud credits, plus onboarding and design-review support, for funded startups that have raised $30M or less."
-timestamp: 2026-11-16
+timestamp: 2026-11-24
 order: 71
 short: "Temporal"
 logo: ""
