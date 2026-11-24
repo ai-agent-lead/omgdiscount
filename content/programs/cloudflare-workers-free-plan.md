@@ -2,7 +2,7 @@
 type: program
 title: "Cloudflare Workers Free Plan"
 description: "The default Cloudflare Workers plan, with daily usage limits and no monthly fee."
-timestamp: 2026-11-10
+timestamp: 2026-11-24
 order: 37
 short: "Cloudflare"
 logo: "cloudflare"

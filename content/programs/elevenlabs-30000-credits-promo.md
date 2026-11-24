@@ -2,7 +2,7 @@
 type: program
 title: "ElevenLabs 30,000 Credits Promo"
 description: "A promotional offer of 30,000 ElevenLabs credits for $1. The pricing page shows this offer as ended."
-timestamp: 2026-11-10
+timestamp: 2026-11-24
 order: 54
 short: "ElevenLabs"
 logo: "elevenlabs"

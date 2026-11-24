@@ -2,7 +2,7 @@
 type: program
 title: "NVIDIA Inception"
 description: "A free program for AI startups with NVIDIA GPU cloud credits, software and technical help."
-timestamp: 2026-11-10
+timestamp: 2026-11-24
 order: 4
 short: "NVIDIA"
 logo: "nvidia"

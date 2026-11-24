@@ -2,7 +2,7 @@
 type: program
 title: "Cloudflare for Students"
 description: "Twelve months of the Cloudflare Workers Paid plan with the base fee waived, for US students with a .edu email."
-timestamp: 2026-11-10
+timestamp: 2026-11-24
 order: 20
 short: "Cloudflare"
 logo: "cloudflare"

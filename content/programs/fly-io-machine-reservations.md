@@ -1,40 +1,40 @@
 ---
 type: program
 title: "Fly.io Machine Reservations"
-description: "A 40% discount on reserved Fly.io Machine compute, purchased as one-year blocks."
-timestamp: 2026-11-10
+description: "Discounts of 20% to 30% on reserved Fly.io Machine compute, bought as 12-month regional or global reservation blocks."
+timestamp: 2026-11-24
 order: 33
 short: "Fly.io"
 logo: "fly-io"
 category: "cloud"
 tags: ["cloud","hosting"]
 value: 0
-unit: "40% off reserved Machine compute, billed as one-year blocks"
+unit: "30% off regional blocks; 20% (upfront) or 10% (monthly) off global blocks, 12-month term"
 ai: false
-benefit: "Reserve a block of shared or performance Machine compute in a region and get a 40% discount versus on-demand credits"
+benefit: "Reserve Machine CPU and RAM for 12 months: 30% off regional blocks, or 20% (upfront) / 10% (monthly) off global blocks"
 elig: "Any Fly.io organization that can buy reservation blocks in the billing dashboard"
 stages: ["pre", "seed", "a"]
-gate: "Paid upfront for one year; credits apply only to CPU and extra RAM in the chosen region"
+gate: "12-month commitment, non-refundable; credits cover only Machine CPU and extra RAM; only org admins can buy"
 expired: false
 apply_url: "https://docs.fly.io/about/pricing"
 ---
 
 ## What it is
 
-Fly.io sells one-year Machine reservation blocks that give a 40% discount on reserved compute in a specific region, for either shared or performance Machines.
+Fly.io sells 12-month Machine reservation blocks that discount CPU and RAM usage. Regional blocks cover one CPU class (shared or performance) in one region at a 30% discount. Global blocks cover both CPU classes in every region, at 20% off if paid upfront or 10% off if paid monthly.
 
 ## What you can use it for
 
-You pay a yearly amount upfront and receive a monthly credit toward CPU and additional RAM for Machines of that class in that region, across apps in the organization. The credit does not roll over, and it does not cover volumes, bandwidth or other line items.
+You commit to a monthly credit toward Machine CPU and additional RAM, which applies across all apps in the organization. The credit is only valid for its month and does not roll over. It does not cover volumes, bandwidth or other line items. Reservations are non-refundable.
 
 ## Who qualifies
 
-Reservations are self-serve in the billing section of the Fly.io dashboard. Official block sizes include $36/year for $5/month of shared Machine usage, $360/year for $50/month, and $3,600/year for $500/month; performance blocks start at $144/year for $20/month of usage. You can buy more than one block. Reservations are backdated to the first day of the purchase month.
+Reservations are self-serve on the organization's Billing page, and only organization admins can buy them. Regional block sizes: shared Machines at $42/year for $5/month of usage, $420/year for $50/month, and $4,200/year for $500/month; performance Machines at $168/year for $20/month, $1,680/year for $200/month, and $16,800/year for $2,000/month. Global blocks accept any whole-dollar monthly credit from $100 to $50,000 (for example $960 upfront for $100/month, or $90/month for 12 months). Reservations are backdated to the first day of the purchase month, and you can buy more than one.
 
 Check docs.fly.io/about/pricing for the current block sizes and terms.
 
 ## How to apply
 
-1. Open the billing section of the Fly.io dashboard.
-2. Set up a reservation block for the CPU class and region you want.
-3. Pay the yearly amount. The monthly credit then applies to matching Machine compute for 12 months, starting with the month of purchase.
+1. Open the Billing page of your organization in the Fly.io dashboard and select Buy Reservations.
+2. Choose Regional (CPU class, region and monthly credit) or Global (pay upfront or monthly, and a monthly credit).
+3. Review the 12-month commitment and confirm. Each month's credit is added once its payment succeeds.

@@ -2,7 +2,7 @@
 type: program
 title: "Fly.io Hobby Plan Trial Credit"
 description: "A discontinued one-time $5 trial credit that came with Fly.io's former $5 per month Hobby plan."
-timestamp: 2026-11-10
+timestamp: 2026-11-24
 order: 55
 short: "Fly.io"
 logo: "fly-io"
