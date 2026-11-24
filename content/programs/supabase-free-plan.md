@@ -2,7 +2,7 @@
 type: program
 title: "Supabase Free Plan"
 description: "Supabase's $0 plan, with two active projects, a 500 MB database and included Auth, Storage and API usage."
-timestamp: 2026-11-10
+timestamp: 2026-11-25
 order: 47
 short: "Supabase"
 logo: "supabase"

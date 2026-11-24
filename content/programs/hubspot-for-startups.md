@@ -2,7 +2,7 @@
 type: program
 title: "HubSpot for Startups"
 description: "90% off HubSpot in year one for Seed and Series A startups, plus partner offers."
-timestamp: 2026-11-17
+timestamp: 2026-11-25
 order: 77
 short: "HubSpot"
 logo: ""

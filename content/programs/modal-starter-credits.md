@@ -2,7 +2,7 @@
 type: program
 title: "Modal Starter Credits"
 description: "The Modal Starter plan has no monthly fee and includes $30 of compute credits each month."
-timestamp: 2026-11-10
+timestamp: 2026-11-25
 order: 38
 short: "Modal"
 logo: "modal"

@@ -2,7 +2,7 @@
 type: program
 title: "Supabase Pro Compute Credits"
 description: "Pro and Team plans include $10 per month in compute credits, enough for one Micro instance."
-timestamp: 2026-11-10
+timestamp: 2026-11-25
 order: 48
 short: "Supabase"
 logo: "supabase"
