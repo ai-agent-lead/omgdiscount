@@ -2,7 +2,7 @@
 type: program
 title: "Modal for Startups"
 description: "A code-first cloud for GPU and CPU workloads, used to train, serve and scale AI jobs."
-timestamp: 2026-11-18
+timestamp: 2026-11-25
 order: 12
 short: "Modal"
 logo: "modal"

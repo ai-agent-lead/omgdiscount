@@ -2,7 +2,7 @@
 type: program
 title: "Replit for Startups"
 description: "Up to $25,000 in Replit credits, or a year of Replit Pro, for startups backed by a partner fund or accelerator."
-timestamp: 2026-11-17
+timestamp: 2026-11-25
 order: 75
 short: "Replit"
 logo: ""

@@ -2,7 +2,7 @@
 type: program
 title: "Lovable Student Discount"
 description: "50% off Lovable Pro for up to 12 months for verified students."
-timestamp: 2026-11-17
+timestamp: 2026-11-25
 order: 78
 short: "Lovable"
 logo: ""

@@ -2,7 +2,7 @@
 type: program
 title: "Neon Credits for Startups"
 description: "Neon serverless Postgres, with Databricks credits on the venture-backed tier."
-timestamp: 2026-11-18
+timestamp: 2026-11-25
 order: 9
 short: "Neon"
 logo: "neon"
