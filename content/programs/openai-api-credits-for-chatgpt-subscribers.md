@@ -2,7 +2,7 @@
 type: program
 title: "OpenAI API Credits for ChatGPT Subscribers"
 description: "Monthly OpenAI API credits for eligible ChatGPT Pro and Business subscribers, up to $500."
-timestamp: 2026-11-20
+timestamp: 2026-11-26
 order: 45
 short: "OpenAI"
 logo: ""

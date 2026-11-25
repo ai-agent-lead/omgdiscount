@@ -2,7 +2,7 @@
 type: program
 title: "v0 for Students"
 description: "One year of complimentary v0 access, with $20 in credits each month, for verified students at participating schools."
-timestamp: 2026-11-18
+timestamp: 2026-11-26
 order: 25
 short: "v0"
 logo: "vercel"

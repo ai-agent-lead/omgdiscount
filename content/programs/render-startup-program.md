@@ -2,7 +2,7 @@
 type: program
 title: "Render Startup Program"
 description: "Render cloud hosting for web apps and AI workloads, with persistent compute and dynamic scaling."
-timestamp: 2026-11-20
+timestamp: 2026-11-26
 order: 13
 short: "Render"
 logo: "render"

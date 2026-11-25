@@ -2,7 +2,7 @@
 type: program
 title: "Pinecone Starter Plan"
 description: "Pinecone's free Starter plan for trying the vector database and running small applications."
-timestamp: 2026-11-20
+timestamp: 2026-11-26
 order: 49
 short: "Pinecone"
 logo: ""

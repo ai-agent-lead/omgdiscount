@@ -2,7 +2,7 @@
 type: program
 title: "Claude for Nonprofits"
 description: "Discounted Claude Team and Enterprise plans for registered nonprofits, schools and some healthcare providers."
-timestamp: 2026-11-20
+timestamp: 2026-11-26
 order: 30
 short: "Anthropic"
 logo: "anthropic"
