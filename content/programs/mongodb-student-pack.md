@@ -2,7 +2,7 @@
 type: program
 title: "MongoDB Student Pack"
 description: "$50 in MongoDB Atlas credits and a free MongoDB certification, through the GitHub Student Developer Pack."
-timestamp: 2026-11-18
+timestamp: 2026-11-25
 order: 26
 short: "MongoDB"
 logo: "mongodb"

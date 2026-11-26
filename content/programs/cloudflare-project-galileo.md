@@ -2,7 +2,7 @@
 type: program
 title: "Cloudflare Project Galileo"
 description: "Free Cloudflare Business-plan security for at-risk public-interest, journalism and civil-society sites."
-timestamp: 2026-11-10
+timestamp: 2026-11-24
 order: 22
 short: "Cloudflare"
 logo: "cloudflare"

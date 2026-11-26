@@ -1,17 +1,17 @@
 ---
 type: program
 title: "Intercom Early Stage Program"
-description: "93% off Intercom in year 1, with a free year of Fin AI Agent usage included, for startups with up to $10M in funding and under 15 employees."
-timestamp: 2026-11-16
+description: "96% off Intercom in year 1, with a free year of Fin AI Agent usage included, for startups with up to $10M in funding and under 15 employees."
+timestamp: 2026-11-24
 order: 73
 short: "Intercom"
 logo: ""
 category: "ops"
 tags: ["ai","customer-support","startup-credits"]
 value: 0
-unit: "93% off year 1, 50% off year 2, 25% off year 3"
+unit: "96% off year 1, 50% off year 2, 25% off year 3"
 ai: true
-benefit: "93% off Intercom in year 1 (helpdesk from $65 per month), with 300 Fin outcomes and 15 Fin qualifications per month included; 50% off in year 2 and 25% off in year 3"
+benefit: "96% off Intercom in year 1 (helpdesk from $30 per month), with 300 Fin outcomes and 15 Fin qualifications per month included; 50% off in year 2 and 25% off in year 3"
 elig: "Up to $10M in funding, fewer than 15 employees, and not currently an Intercom customer"
 stages: ["pre", "seed"]
 gate: "New Intercom customers only; discounts end if you switch to a self-serve or sales-led plan"
@@ -29,7 +29,7 @@ Customer support and sales conversations in Intercom. The plan includes 6 Advanc
 
 ## Who qualifies
 
-Intercom lists three requirements: up to $10M in funding, fewer than 15 employees, and not currently an Intercom customer. The discount applies to usage-based costs for email, pro conversations over 1k per month, messages over 500 per month and seats beyond 6. It does not apply to extra outcomes or qualifications, or to phone, SMS and WhatsApp, which are charged at list price.
+Intercom lists three requirements: up to $10M in funding, fewer than 15 employees, and not currently an Intercom customer. The 96% discount applies to usage-based costs for email, pro conversations over 1k per month, messages over 500 per month and seats beyond 6. It does not apply to extra outcomes or qualifications, or to phone, SMS and WhatsApp, which are charged at list price.
 
 Year 2 and year 3 discounts are only for customers who stay on the program.
 

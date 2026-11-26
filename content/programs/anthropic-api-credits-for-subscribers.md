@@ -2,7 +2,7 @@
 type: program
 title: "Anthropic API Credits for Subscribers"
 description: "Monthly Claude API credits for Max, Ultra and Team subscribers, up to $500 on Team plans."
-timestamp: 2026-11-10
+timestamp: 2026-11-24
 order: 46
 short: "Anthropic"
 logo: "anthropic"

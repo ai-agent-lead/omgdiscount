@@ -2,7 +2,7 @@
 type: program
 title: "Turso Free Plan"
 description: "Turso's free cloud plan for SQLite-compatible databases, with no credit card required."
-timestamp: 2026-11-20
+timestamp: 2026-11-26
 order: 81
 short: "Turso"
 logo: ""

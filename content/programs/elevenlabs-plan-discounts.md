@@ -2,7 +2,7 @@
 type: program
 title: "ElevenLabs Plan Discounts"
 description: "First-month prices on Starter and Creator, plus annual billing that equals two months free."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 36
 short: "ElevenLabs"
 logo: "elevenlabs"

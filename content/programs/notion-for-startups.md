@@ -2,7 +2,7 @@
 type: program
 title: "Notion for Startups"
 description: "A workspace for docs, wikis, databases and project tracking."
-timestamp: 2026-11-20
+timestamp: 2026-11-26
 order: 7
 short: "Notion"
 logo: "notion"

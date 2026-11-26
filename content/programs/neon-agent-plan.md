@@ -2,7 +2,7 @@
 type: program
 title: "Neon Agent Plan"
 description: "A Neon plan for platforms that provision Postgres databases for end users, with credits and sponsored free-tier infrastructure."
-timestamp: 2026-11-10
+timestamp: 2026-11-25
 order: 17
 short: "Neon"
 logo: "neon"

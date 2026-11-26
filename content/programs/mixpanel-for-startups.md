@@ -2,7 +2,7 @@
 type: program
 title: "Mixpanel for Startups"
 description: "A free first year on Mixpanel's Startup Plan, with all features and add-ons, for startups under five years old that have raised $8M or less."
-timestamp: 2026-11-16
+timestamp: 2026-11-24
 order: 72
 short: "Mixpanel"
 logo: ""

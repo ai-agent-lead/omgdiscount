@@ -2,7 +2,7 @@
 type: program
 title: "ElevenLabs for Students"
 description: "Three months of the ElevenLabs Creator plan, plus one year of ElevenReader Ultra, for verified students."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 18
 short: "ElevenLabs"
 logo: "elevenlabs"

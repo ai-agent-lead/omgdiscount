@@ -2,7 +2,7 @@
 type: program
 title: "Fly.io for Startups"
 description: "Fly.io: hardware-isolated microVMs, Managed Postgres, volumes and private networking."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 8
 short: "Fly.io"
 logo: "fly-io"

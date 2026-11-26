@@ -2,7 +2,7 @@
 type: program
 title: "Neon Open Source Program"
 description: "Cash sponsorships for open source maintainers, with optional Neon and AI Gateway credits."
-timestamp: 2026-11-18
+timestamp: 2026-11-25
 order: 16
 short: "Neon"
 logo: "neon"

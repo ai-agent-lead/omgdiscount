@@ -2,7 +2,7 @@
 type: program
 title: "GitHub Student Developer Pack"
 description: "A free bundle of developer tools and partner offers for verified students."
-timestamp: 2026-11-18
+timestamp: 2026-11-25
 order: 57
 short: "GitHub"
 logo: ""

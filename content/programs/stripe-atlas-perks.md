@@ -2,7 +2,7 @@
 type: program
 title: "Stripe Atlas Perks"
 description: "$2,500 in Stripe product credits and partner discounts for startups that incorporate with Stripe Atlas."
-timestamp: 2026-11-13
+timestamp: 2026-11-24
 order: 68
 short: "Stripe"
 logo: ""

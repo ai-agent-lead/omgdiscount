@@ -2,7 +2,7 @@
 type: program
 title: "Cloudflare Project Alexandria"
 description: "Recurring annual Cloudflare credits for nonprofit open source projects."
-timestamp: 2026-11-10
+timestamp: 2026-11-26
 order: 21
 short: "Cloudflare"
 logo: "cloudflare"

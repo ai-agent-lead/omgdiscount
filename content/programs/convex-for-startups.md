@@ -2,7 +2,7 @@
 type: program
 title: "Convex for Startups"
 description: "Convex is a reactive backend and database for web and AI-generated apps."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 15
 short: "Convex"
 logo: "convex"

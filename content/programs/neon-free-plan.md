@@ -2,7 +2,7 @@
 type: program
 title: "Neon Free Plan"
 description: "A permanent free Neon plan for Postgres, with no credit card and no time limit."
-timestamp: 2026-11-10
+timestamp: 2026-11-25
 order: 34
 short: "Neon"
 logo: "neon"

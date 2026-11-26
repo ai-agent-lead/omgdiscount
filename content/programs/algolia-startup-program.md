@@ -2,7 +2,7 @@
 type: program
 title: "Algolia Startup Program"
 description: "$10,000 in Algolia search credits for 12 months for young startups that have raised under $15M."
-timestamp: 2026-11-20
+timestamp: 2026-11-26
 order: 80
 short: "Algolia"
 logo: ""

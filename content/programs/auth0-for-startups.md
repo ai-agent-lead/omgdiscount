@@ -2,7 +2,7 @@
 type: program
 title: "Auth0 for Startups"
 description: "One year of Auth0 B2B Professional capabilities, free, for early-stage venture-backed startups."
-timestamp: 2026-11-16
+timestamp: 2026-11-24
 order: 69
 short: "Auth0"
 logo: ""

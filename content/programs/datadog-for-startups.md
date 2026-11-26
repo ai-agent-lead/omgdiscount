@@ -2,7 +2,7 @@
 type: program
 title: "Datadog for Startups"
 description: "Up to a year of the full Datadog platform, with up to $100k in credits, for Series A or earlier startups referred by a partner."
-timestamp: 2026-11-12
+timestamp: 2026-11-24
 order: 64
 short: "Datadog"
 logo: ""

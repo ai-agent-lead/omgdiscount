@@ -2,7 +2,7 @@
 type: program
 title: "LangSmith for Startups"
 description: "Discounted LangSmith seats for early-stage startups, and $10K in LangSmith credits for startups backed by LangChain's partner VCs."
-timestamp: 2026-11-18
+timestamp: 2026-11-25
 order: 79
 short: "LangSmith"
 logo: ""

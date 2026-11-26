@@ -2,7 +2,7 @@
 type: program
 title: "Databricks Free Edition"
 description: "A no-cost, quota-limited Databricks workspace for learning and experimenting with data and AI."
-timestamp: 2026-11-13
+timestamp: 2026-11-24
 order: 66
 short: "Databricks"
 logo: ""

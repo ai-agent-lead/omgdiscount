@@ -2,7 +2,7 @@
 type: program
 title: "DigitalOcean Startups"
 description: "DigitalOcean credits for AI-native startups. New applications are paused until an updated program launches in early 2027."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 61
 short: "DigitalOcean"
 logo: ""
@@ -21,7 +21,7 @@ apply_url: "https://www.digitalocean.com/hatch"
 
 ## What it is
 
-DigitalOcean Startups, formerly called Hatch, gives startups 12 months of DigitalOcean credits through approved accelerator, VC and incubator partners. As of 10 November 2026, DigitalOcean says applications for the current cohort are paused while it prepares an updated program, scheduled for early 2027.
+DigitalOcean Startups, formerly called Hatch, gives startups 12 months of DigitalOcean credits through approved accelerator, VC and incubator partners. As of 23 November 2026, DigitalOcean says applications for the current cohort are paused while it prepares an updated program, scheduled for early 2027.
 
 ## What you can use it for
 

@@ -2,7 +2,7 @@
 type: program
 title: "Convex Free Plan"
 description: "Convex's Free plan includes built-in monthly usage for function calls, storage and compute."
-timestamp: 2026-11-10
+timestamp: 2026-11-24
 order: 40
 short: "Convex"
 logo: "convex"

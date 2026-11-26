@@ -2,7 +2,7 @@
 type: program
 title: "Convex for Open Source"
 description: "Free Convex Pro for one team, plus support and swag, for accepted open source projects."
-timestamp: 2026-11-10
+timestamp: 2026-11-24
 order: 24
 short: "Convex"
 logo: "convex"

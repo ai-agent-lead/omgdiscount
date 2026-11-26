@@ -2,7 +2,7 @@
 type: program
 title: "Google for Startups Cloud Program"
 description: "Google Cloud: compute, storage, databases and managed AI services."
-timestamp: 2026-11-10
+timestamp: 2026-11-23
 order: 1
 short: "Google Cloud"
 logo: "google-cloud"

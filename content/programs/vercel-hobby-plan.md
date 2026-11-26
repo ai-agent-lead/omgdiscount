@@ -2,7 +2,7 @@
 type: program
 title: "Vercel Hobby Plan"
 description: "Vercel's free Hobby plan for personal, non-commercial projects, with monthly included usage."
-timestamp: 2026-11-10
+timestamp: 2026-11-25
 order: 41
 short: "Vercel"
 logo: "vercel"

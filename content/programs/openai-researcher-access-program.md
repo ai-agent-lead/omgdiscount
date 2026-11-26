@@ -2,7 +2,7 @@
 type: program
 title: "OpenAI Researcher Access Program"
 description: "Subsidized OpenAI API credits for research on responsible AI, risk mitigation and societal impact."
-timestamp: 2026-11-13
+timestamp: 2026-11-25
 order: 28
 short: "OpenAI"
 logo: ""

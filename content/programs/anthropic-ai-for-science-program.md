@@ -2,7 +2,7 @@
 type: program
 title: "Anthropic AI for Science Program"
 description: "Free Claude API credits for academic and nonprofit researchers working on high-impact scientific projects."
-timestamp: 2026-11-10
+timestamp: 2026-11-25
 order: 29
 short: "Anthropic"
 logo: "anthropic"

@@ -2,7 +2,7 @@
 type: program
 title: "Figma for Education"
 description: "Free Figma access, including the AI toolkit, for verified students and educators."
-timestamp: 2026-11-17
+timestamp: 2026-11-25
 order: 76
 short: "Figma"
 logo: ""

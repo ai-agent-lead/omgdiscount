@@ -2,7 +2,7 @@
 type: program
 title: "PostHog for Startups"
 description: "$50,000 in PostHog credits for 12 months for young startups, plus partner perks."
-timestamp: 2026-11-20
+timestamp: 2026-11-26
 order: 56
 short: "PostHog"
 logo: ""
@@ -11,7 +11,7 @@ tags: ["analytics","developer-tools","startup-credits"]
 value: 50000
 unit: "USD PostHog credits, 12 months"
 ai: false
-benefit: "$50,000 in PostHog credits for 12 months, plus $12,000 in partner benefits (including $5,000 of Depot credit and $1,500 off Incident.io) and PostHog swag"
+benefit: "$50,000 in PostHog credits for 12 months, plus $12,000 in partner benefits (including $5,000 of Depot credit, $1,500 off Incident.io and 50% off Speakeasy for 6 months) and PostHog swag"
 elig: "Companies under 2 years old that have raised under $5M, applying from a PostHog account on a company email domain"
 stages: ["pre", "seed"]
 gate: "Company email domain and a paid PostHog plan (you are only charged for usage)"

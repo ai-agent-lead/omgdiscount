@@ -2,7 +2,7 @@
 type: program
 title: "Claude Campus"
 description: "Anthropic's campus ambassador program, with a $3,600 stipend. Applications for Fall 2026 are closed."
-timestamp: 2026-11-10
+timestamp: 2026-11-24
 order: 52
 short: "Anthropic"
 logo: "anthropic"

@@ -2,7 +2,7 @@
 type: program
 title: "Atlassian for Startups"
 description: "Atlassian Cloud Premium products for $0 for 12 months, for up to 50 users, for VC-backed or accelerator-backed startups."
-timestamp: 2026-11-17
+timestamp: 2026-11-24
 order: 74
 short: "Atlassian"
 logo: ""
